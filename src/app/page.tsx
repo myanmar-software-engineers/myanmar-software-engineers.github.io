@@ -1,10 +1,7 @@
-import BodyText from "@/components/Common/BodyText/BodyText";
 import Container from "@/components/Common/Container/Container";
 import SpacingDivider from "@/components/Common/SpacingDivider/SpacingDivider";
-import TitleText from "@/components/Common/TitleText/TitleText";
 import HomeSection from "@/components/MSE/HomeSection";
 import JoinSection from "@/components/MSE/JoinSection";
-import SquareBox from "@/components/Ui/SquareBox/SquareBox";
 import APP_CONFIG from "@/config/config";
 import { Metadata } from "next";
 
@@ -25,6 +22,8 @@ export default function HomePage() {
       {/* Joined Section: Start */}
       <JoinSection />
       {/* Joined Section: Finished */}
+
+      <SpacingDivider />
     </Container>
   );
 }

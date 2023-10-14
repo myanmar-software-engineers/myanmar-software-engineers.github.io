@@ -72,16 +72,16 @@ const HomeSection = () => {
       <div
         className={cn(
           titleFont.className,
-          "flex-1 text-center lg:text-left lg:pl-16 text-5xl -rotate-[8deg]"
+          "flex-1 text-center lg:text-left text-5xl"
         )}
       >
         {title.map((title, index) => (
-          <motion.h2 key={`${title}_hero_title`} className={cn("mb-5")}>
+          <motion.h2 key={`${title}_hero_title`} className={cn("mb-5 w-8/12 -rotate-[8deg]")}>
             <AnimateText text={title} />
           </motion.h2>
         ))}
       </div>
-      <motion.div className="relative flex-1 grid grid-cols-2 gap-4 mt-5 lg:mt-0">
+      <motion.div className="relative flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 mt-5 lg:mt-0">
         <Card
           icon={<DiCode className="inline-block mr-3" />}
           title="Dev-Profiles"
