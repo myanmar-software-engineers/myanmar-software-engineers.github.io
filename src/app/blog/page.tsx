@@ -1,4 +1,7 @@
+import Container from "@/components/Common/Container/Container";
+
 const BlogListPage = () => {
-  return <div>BlogListPage</div>;
+  return <Container>BlogListPage</Container>;
 };
+
 export default BlogListPage;
