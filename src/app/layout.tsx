@@ -1,11 +1,12 @@
 import Navbar from "@/components/Common/Navbar/Navbar";
-import { titleFont } from "@/fonts/fonts";
+import { bodyFont } from "@/fonts/fonts";
 import { cn } from "@/lib/utils";
 import styles from "@/styles/styles";
 import type { Metadata } from "next";
-import "./globals.css";
 import APP_CONFIG from "@/config/config";
 import Favicons from "@/components/Favicons/Favicons";
+// Styles
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: APP_CONFIG.title,
@@ -20,7 +21,7 @@ export default function RootLayout({
 }) {
   const cls = cn(
     styles.gradient,
-    titleFont.className,
+    bodyFont.className,
     "min-h-screen text-white"
   );
   return (

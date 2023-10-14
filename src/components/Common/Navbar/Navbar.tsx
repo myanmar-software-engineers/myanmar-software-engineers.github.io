@@ -1,15 +1,12 @@
 import MseLink from "@/components/Ui/MseLink/MseLink";
-import { cn } from "@/lib/utils";
-import styles from "@/styles/styles";
-import Container from "../Container/Container";
 import MseLogo from "@/components/Ui/MseLogo/MseLogo";
+import { cn } from "@/lib/utils";
+import Container from "../Container/Container";
 
 const Navbar = () => {
   return (
     <nav className={cn("w-full py-5")}>
-      <Container
-        className={cn("flex flex-row justify-between", styles.paddingHelper)}
-      >
+      <Container withPadding className={cn("flex flex-row justify-between")}>
         {/* ---- Logo: Start ---- */}
         <div className="flex-1">
           <MseLogo />
@@ -26,7 +23,7 @@ const Navbar = () => {
 
         {/* ---- DarkMode: Start ---- */}
         <div className="hidden lg:flex flex flex-1 justify-end">
-          <MseLink href="/">Contact Us</MseLink>
+          <MseLink href="/contact-us">Contact Us</MseLink>
         </div>
         {/* ---- DarkMode: Finish ---- */}
       </Container>
