@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import React from "react";
 

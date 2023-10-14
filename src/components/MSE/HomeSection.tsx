@@ -78,7 +78,7 @@ const HomeSection = () => {
         {title.map((title, index) => (
           <motion.h2
             key={`${title}_hero_title`}
-            className={cn("mb-5 w-8/12 -rotate-[8deg]")}
+            className={cn("mb-5 pl-8 lg:w-8/12 lg:-rotate-[8deg]")}
           >
             <AnimateText text={title} />
           </motion.h2>
