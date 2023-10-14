@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.mse-gradient {
+  background: linear-gradient(
+    145deg,
+    rgb(0, 32, 95) 2.8%,
+    rgb(132, 53, 142) 80.8%
+  );
+}

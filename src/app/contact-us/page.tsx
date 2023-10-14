@@ -3,11 +3,11 @@ import APP_CONFIG from "@/config/config";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Profile List - ${APP_CONFIG.title}`,
+  title: `Contact us - ${APP_CONFIG.title}`,
   description: APP_CONFIG.description,
 };
 
-const ProfileListPage = () => {
-  return <Container>ProfileListPage</Container>;
+const ContactUsPage: React.FC = async () => {
+  return <Container> Contact Us Page </Container>;
 };
-export default ProfileListPage;
+export default ContactUsPage;
