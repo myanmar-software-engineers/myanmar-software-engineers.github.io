@@ -1,6 +1,6 @@
 "use client";
 import { titleFont } from "@/fonts/fonts";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 import { Variants, motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { ReactNode, useRef } from "react";
@@ -76,7 +76,10 @@ const HomeSection = () => {
         )}
       >
         {title.map((title, index) => (
-          <motion.h2 key={`${title}_hero_title`} className={cn("mb-5 w-8/12 -rotate-[8deg]")}>
+          <motion.h2
+            key={`${title}_hero_title`}
+            className={cn("mb-5 w-8/12 -rotate-[8deg]")}
+          >
             <AnimateText text={title} />
           </motion.h2>
         ))}

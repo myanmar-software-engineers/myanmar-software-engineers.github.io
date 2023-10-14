@@ -6,7 +6,7 @@ import BodyText from "../Common/BodyText/BodyText";
 import SquareBox from "../Ui/SquareBox/SquareBox";
 import TitleText from "../Common/TitleText/TitleText";
 import APP_CONFIG from "@/config/config";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 import FacebookArrows from "../Ui/Arrows/FacebookArrows";
 
 const JoinSection = () => {
@@ -34,7 +34,7 @@ const JoinSection = () => {
 
         <motion.div
           className="w-[70px] hidden lg:block absolute bottom-[18px] right-[15px]"
-          initial={{ opacity: 0, x: -8, }}
+          initial={{ opacity: 0, x: -8 }}
           animate={{ opacity: 0.7, x: 0, transition: { delay: 1 } }}
         >
           <FacebookArrows />

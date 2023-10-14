@@ -1,6 +1,6 @@
 import Navbar from "@/components/Common/Navbar/Navbar";
 import { bodyFont } from "@/fonts/fonts";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 import styles from "@/styles/styles";
 import type { Metadata } from "next";
 import APP_CONFIG from "@/config/config";

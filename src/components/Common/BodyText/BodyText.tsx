@@ -1,5 +1,5 @@
 import { bodyFont } from "@/fonts/fonts";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 import { PropsWithChildren } from "react";
 
 type TBodyText = PropsWithChildren<{

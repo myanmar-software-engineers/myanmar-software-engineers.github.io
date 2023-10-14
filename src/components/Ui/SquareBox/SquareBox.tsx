@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 import { PropsWithChildren } from "react";
 import styles from "@/styles/styles";
 

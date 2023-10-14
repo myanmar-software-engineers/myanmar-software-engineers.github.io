@@ -1,6 +1,6 @@
 import MseLink from "@/components/Ui/MseLink/MseLink";
 import MseLogo from "@/components/Ui/MseLogo/MseLogo";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 import Container from "../Container/Container";
 
 const Navbar = () => {
