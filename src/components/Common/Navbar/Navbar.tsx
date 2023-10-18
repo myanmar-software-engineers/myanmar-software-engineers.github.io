@@ -5,7 +5,7 @@ import Container from "../Container/Container";
 
 const Navbar = () => {
   return (
-    <nav className={cn("w-full py-5")}>
+    <nav className={cn("w-full py-5 mb-2")}>
       <Container withPadding className={cn("flex flex-row justify-between")}>
         {/* ---- Logo: Start ---- */}
         <div className="flex-1">

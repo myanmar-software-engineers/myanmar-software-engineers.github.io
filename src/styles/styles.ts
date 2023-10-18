@@ -10,7 +10,7 @@ const styles = {
     `,
   squareBackground: "bg-square",
   glassomophic:
-    "bg-white-600 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10",
+    "bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10",
 } as const;
 
 export default styles;

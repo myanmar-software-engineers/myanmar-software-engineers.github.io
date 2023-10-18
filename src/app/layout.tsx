@@ -7,6 +7,7 @@ import APP_CONFIG from "@/config/config";
 import Favicons from "@/components/Favicons/Favicons";
 // Styles
 import "./globals.css";
+import Footer from "@/components/Common/Footer/Footer";
 
 export const metadata: Metadata = {
   title: APP_CONFIG.title,
@@ -22,7 +23,8 @@ export default function RootLayout({
   const cls = cn(
     styles.gradient,
     bodyFont.className,
-    "min-h-screen text-white"
+    "min-h-screen text-white",
+    "overflow-x-hidden"
   );
   return (
     <html lang="en">
@@ -31,7 +33,8 @@ export default function RootLayout({
       </head>
       <body className={cls}>
         <Navbar />
-        <main>{children}</main>
+        <main className="min-h-[calc(100vh-142px)]">{children}</main>
+        <Footer />
       </body>
     </html>
   );

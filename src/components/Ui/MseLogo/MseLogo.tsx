@@ -6,7 +6,7 @@ const MseLogo = () => {
     <TitleText>
       <MseLink href="/">
         <TitleText tag="span" className="text-xl font-bold">
-          M
+          MM
         </TitleText>
         <TitleText tag="span" className="text-md">
           SWE.com

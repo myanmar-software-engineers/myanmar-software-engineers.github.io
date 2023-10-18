@@ -3,7 +3,7 @@ import APP_CONFIG from "@/config/config";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Contact us - ${APP_CONFIG.title}`,
+  title: `Contact us | ${APP_CONFIG.title}`,
   description: APP_CONFIG.description,
 };
 

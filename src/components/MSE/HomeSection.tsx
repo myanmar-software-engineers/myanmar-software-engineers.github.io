@@ -11,19 +11,9 @@ import BodyText from "../Common/BodyText/BodyText";
 import TitleText from "../Common/TitleText/TitleText";
 import TopArrow from "../Ui/Arrows/TopArrows";
 import SquareBox from "../Ui/SquareBox/SquareBox";
+import { opacityAnimation } from "@/data/animationVariants;";
 
 const title = ["Myanmar", "Software", "Engineers"];
-
-const textAnimation: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 8,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
-};
 
 const Card = ({
   title,
@@ -38,7 +28,7 @@ const Card = ({
 }) => {
   return (
     <motion.div
-      variants={textAnimation}
+      variants={opacityAnimation}
       transition={{ staggerChildren: 0.017 }}
       className="relative flex"
     >
@@ -48,7 +38,7 @@ const Card = ({
             {icon}
             <AnimateText text={title} />
           </TitleText>
-          <motion.div variants={textAnimation}>
+          <motion.div variants={opacityAnimation}>
             <BodyText>{body}</BodyText>
           </motion.div>
         </SquareBox>
@@ -102,9 +92,14 @@ const HomeSection = () => {
           link="/blog"
         />
         <motion.div
-          className="w-[130px] hidden lg:block absolute bottom-0 -left-[138px]"
+          className="w-[130px] hidden lg:block absolute bottom-0 -left-[138px] "
           initial={{ opacity: 0, y: 8, x: -4 }}
-          animate={{ opacity: 1, y: 0, x: 0, transition: { delay: 0.7 } }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            x: 0,
+            transition: { delay: 0.7 },
+          }}
         >
           <TopArrow />
         </motion.div>
