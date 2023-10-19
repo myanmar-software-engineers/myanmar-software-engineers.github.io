@@ -8,6 +8,7 @@ import TitleText from "../Common/TitleText/TitleText";
 import APP_CONFIG from "@/config/config";
 import { cn } from "@/utils";
 import FacebookArrows from "../Ui/Arrows/FacebookArrows";
+import Link from "next/link";
 
 const JoinSection = ({ bgColor = "bg-indigo-500" }: { bgColor?: string }) => {
   return (
@@ -27,9 +28,11 @@ const JoinSection = ({ bgColor = "bg-indigo-500" }: { bgColor?: string }) => {
           fill
         />
         <div className="absolute inset-0 min-h-[240px] relative p-10 flex justify-center items-center">
-          <BodyText className="text-center w-full backdrop-blur hover:backdrop-blur-lg cursor-pointer transition linear duration-100 border border-white p-10 rounded-2xl">
-            Join Our Facebook Community Now
-          </BodyText>
+          <Link href="https://www.facebook.com/groups/myanmarsoftwareengineers">
+            <BodyText className="text-center w-full backdrop-blur hover:backdrop-blur-lg cursor-pointer transition linear duration-100 border border-white p-10 rounded-2xl">
+              Join Our Facebook Community Now
+            </BodyText>
+          </Link>
         </div>
 
         <motion.div
