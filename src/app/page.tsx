@@ -1,4 +1,5 @@
 import Container from "@/components/Common/Container/Container";
+import OverflowContainer from "@/components/Common/Container/OverflowContainer";
 import SpacingDivider from "@/components/Common/SpacingDivider/SpacingDivider";
 import HomeSection from "@/components/MSE/HomeSection";
 import JoinSection from "@/components/MSE/JoinSection";
@@ -17,8 +18,6 @@ export default function HomePage() {
   return (
     <>
       <Container withPadding>
-        <SpacingDivider />
-
         {/* Home Section: Start */}
         <HomeSection />
         {/* Home Section: Finished */}
@@ -30,24 +29,27 @@ export default function HomePage() {
         {/* Joined Section: Finished */}
 
         <SpacingDivider size="lg" />
+      </Container>
 
+      <OverflowContainer>
         {/* LanguageIcon Section: Start */}
+        <SpacingDivider size="sm" />
+
         <LanguageIconSection />
         {/* LanguageIcon Section: Finished */}
 
-        <SpacingDivider size="lg" />
+        <SpacingDivider size="sm" />
 
         {/* Typo Sectino: Start */}
         <MmsweTypoSection />
         {/* Typo Sectino: Finished */}
-        <SpacingDivider size="lg" />
+        <SpacingDivider size="sm" />
+      </OverflowContainer>
 
+      <Container withPadding>
         {/* Platform Section: Start */}
         <PlatformSection />
         {/* Platform Section: Start */}
-
-        <SpacingDivider size="lg" />
-        <SpacingDivider size="lg" />
       </Container>
     </>
   );

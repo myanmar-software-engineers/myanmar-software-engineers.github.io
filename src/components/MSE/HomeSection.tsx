@@ -1,7 +1,8 @@
 "use client";
+import { opacityAnimation } from "@/data/animationVariants;";
 import { titleFont } from "@/fonts/fonts";
 import { cn } from "@/utils";
-import { Variants, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { ReactNode, useRef } from "react";
 import { DiCode } from "react-icons/di";
@@ -11,7 +12,6 @@ import BodyText from "../Common/BodyText/BodyText";
 import TitleText from "../Common/TitleText/TitleText";
 import TopArrow from "../Ui/Arrows/TopArrows";
 import SquareBox from "../Ui/SquareBox/SquareBox";
-import { opacityAnimation } from "@/data/animationVariants;";
 
 const title = ["Myanmar", "Software", "Engineers"];
 
@@ -68,7 +68,7 @@ const HomeSection = () => {
         {title.map((title, index) => (
           <motion.h2
             key={`${title}_hero_title`}
-            className={cn("mb-5 pl-8 lg:w-8/12 lg:-rotate-[8deg]")}
+            className={cn("mb-5 lg:pl-8 lg:w-8/12 lg:-rotate-[8deg]")}
           >
             <AnimateText text={title} />
           </motion.h2>

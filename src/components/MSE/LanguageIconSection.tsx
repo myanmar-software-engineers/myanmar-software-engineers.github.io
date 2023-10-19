@@ -7,7 +7,7 @@ import SquareBox from "../Ui/SquareBox/SquareBox";
 
 const LanguageIconSection = () => {
   return (
-    <div className="ovflow-x-auto">
+    <div className="">
       <HorizontalWrapper horizontalDirection={400}>
         <motion.div
           initial="hidden"
@@ -30,9 +30,9 @@ const LanguageIconSection = () => {
               }}
               key={item.title}
             >
-              <div className="hover:rotate-[45deg] duration-300 transition ease-out cursor-pointer">
+              <div className="hover:rotate-[45deg] text-white hover:text-rose-400 duration-300 transition ease-out cursor-pointer">
                 <SquareBox className="min-w-[65px] min-h-[65px] rounded-full flex justify-center items-center px-0 py-0">
-                  <item.icon className="text-white w-5 h-5" />
+                  <item.icon className="w-5 h-5" />
                 </SquareBox>
               </div>
             </motion.div>

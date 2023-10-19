@@ -17,7 +17,7 @@ const JoinSection = () => {
     >
       <motion.div
         initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0, transition: { delay: 0.7 } }}
+        animate={{ opacity: 1, y: 0, transition: { delay: 0.6 } }}
         className="w-full relative min-h-[240px] rounded-2xl overflow-hidden backdrop-filter "
       >
         <Image
@@ -45,7 +45,7 @@ const JoinSection = () => {
       <motion.div
         className="flex hover:-translate-y-1 duration-200 transition ease-out"
         initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0, transition: { delay: 0.6 } }}
+        animate={{ opacity: 1, y: 0, transition: { delay: 0.7 } }}
       >
         <SquareBox
           className={cn(

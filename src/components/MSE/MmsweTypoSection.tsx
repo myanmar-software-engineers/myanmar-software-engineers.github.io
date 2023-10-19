@@ -6,8 +6,8 @@ import HorizontalWrapper from "../Common/HorizontalWrapper/HorizontalWrapper";
 const MmsweTypoSection = () => {
   return (
     <Container withPadding>
-      <HorizontalWrapper horizontalDirection={-140} activeOpacity>
-        <div className="relative -right-[140px] ">
+      <HorizontalWrapper horizontalDirection={-150} activeOpacity>
+        <div className="relative -right-[150px] ">
           <MsoTypo />
         </div>
       </HorizontalWrapper>

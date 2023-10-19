@@ -2,6 +2,7 @@ import MseLink from "@/components/Ui/MseLink/MseLink";
 import MseLogo from "@/components/Ui/MseLogo/MseLogo";
 import { cn } from "@/utils";
 import Container from "../Container/Container";
+import SpacingDivider from "../SpacingDivider/SpacingDivider";
 
 const Navbar = () => {
   return (
@@ -27,6 +28,8 @@ const Navbar = () => {
         </div>
         {/* ---- DarkMode: Finish ---- */}
       </Container>
+
+      <SpacingDivider />
     </nav>
   );
 };

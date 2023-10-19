@@ -23,8 +23,7 @@ export default function RootLayout({
   const cls = cn(
     styles.gradient,
     bodyFont.className,
-    "min-h-screen text-white",
-    "overflow-x-hidden"
+    "min-h-screen text-white scroll-smooth"
   );
   return (
     <html lang="en">
