@@ -8,6 +8,7 @@ const config: Config = {
     "./content/blog/**/*.{js,ts,jsx,tsx,mdx}",
     "./content/profile/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/styles/**/*.{ts, tsx}",
+    "./src/utils/**/*.{ts, tsx}",
   ],
   theme: {
     extend: {

@@ -1,8 +1,8 @@
-import { FC } from "react";
+import Container from "@/components/Common/Container/Container";
+import { Mdx } from "@/components/Common/Mdx";
 import { allProfiles } from "contentlayer/generated";
 import { notFound } from "next/navigation";
-import { Mdx } from "@/components/Common/Mdx";
-import Container from "@/components/Common/Container/Container";
+import { FC } from "react";
 
 const getProfileFromParam = async (slug: string) => {
   const profileDetail = allProfiles.find(
@@ -15,6 +15,17 @@ const getProfileFromParam = async (slug: string) => {
 
   return profileDetail;
 };
+
+export async function generateMetadata({
+  params: { slug },
+}: TPProfileDetailPageProps) {
+  const profile = await getProfileFromParam(slug);
+
+  return {
+    title: `Profile | ${profile.name}`,
+    description: `Profile | ${profile.description}`,
+  };
+}
 
 type TPProfileDetailPageProps = {
   params: {
@@ -29,7 +40,6 @@ const PProfileDetailPage: FC<TPProfileDetailPageProps> = async ({
 
   return (
     <Container>
-      <h1>{profile.name}</h1>
       <Mdx code={profile.body.code} />
     </Container>
   );

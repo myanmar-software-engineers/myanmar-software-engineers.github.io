@@ -14,8 +14,8 @@ const BlogListPage = () => {
   return (
     <Container>
       <SquareBox>
-        <TitleText> Welcome to Blogs Page </TitleText>
-        <BodyText> Blogs are coming soon</BodyText>
+        <TitleText className="mb-2"> Welcome to the Blogs Page... </TitleText>
+        <BodyText> Exciting blogs are on the horizon, stay tuned! </BodyText>
       </SquareBox>
     </Container>
   );

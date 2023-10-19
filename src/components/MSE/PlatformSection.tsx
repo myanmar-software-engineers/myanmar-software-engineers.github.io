@@ -5,7 +5,11 @@ import BodyText from "../Common/BodyText/BodyText";
 import SpacingDivider from "../Common/SpacingDivider/SpacingDivider";
 import SquareBox from "../Ui/SquareBox/SquareBox";
 
-const PlatformSection = () => {
+const PlatformSection = ({
+  bgColor = "bg-indigo-500",
+}: {
+  bgColor: string;
+}) => {
   return (
     <>
       <div className={cn("max-w-[860px] text-center mx-auto px-5")}>
@@ -22,7 +26,7 @@ const PlatformSection = () => {
       </div>
       <SpacingDivider size="lg" />
       <SpacingDivider size="lg" />
-      <SquareBox className="text-center">
+      <SquareBox className={cn("text-center", bgColor)}>
         <TitleText tag="h2" className="text-xl">
           Hello World!! From MMSWE
         </TitleText>

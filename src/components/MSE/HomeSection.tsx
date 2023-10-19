@@ -1,7 +1,7 @@
 "use client";
 import { opacityAnimation } from "@/data/animationVariants;";
 import { titleFont } from "@/fonts/fonts";
-import { cn } from "@/utils";
+import { cn, generateColor } from "@/utils";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { ReactNode, useRef } from "react";
@@ -20,11 +20,13 @@ const Card = ({
   body,
   icon,
   link,
+  bgColor,
 }: {
   title: string;
   body: string;
   icon?: ReactNode;
   link: string;
+  bgColor: string;
 }) => {
   return (
     <motion.div
@@ -33,7 +35,12 @@ const Card = ({
       className="relative flex"
     >
       <Link href={link} className="relative flex">
-        <SquareBox className="hover:-translate-y-1 duration-300 transition ease-out">
+        <SquareBox
+          className={cn(
+            "hover:-translate-y-1 duration-300 transition ease-out",
+            bgColor
+          )}
+        >
           <TitleText tag="p" className="text-sm mb-5">
             {icon}
             <AnimateText text={title} />
@@ -47,10 +54,9 @@ const Card = ({
   );
 };
 
-const HomeSection = () => {
+const HomeSection = ({ bgColor = "bg-indigo-500" }: { bgColor?: string }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.4, once: true });
-
   return (
     <motion.div
       ref={ref}
@@ -82,6 +88,7 @@ const HomeSection = () => {
             "You can easily create a profile on our website, and it serves as a platform to showcase your work. Additionally, you can explore the profiles of other developers to connect and collaborate within our community."
           }
           link="/profile"
+          bgColor={bgColor}
         />
         <Card
           icon={<ImBlogger className="inline-block mr-3" />}
@@ -90,6 +97,7 @@ const HomeSection = () => {
             "Feel free to contribute to our developer community by creating your own articles and blogs. You can also easily access and read the content shared by others to enhance your knowledge."
           }
           link="/blog"
+          bgColor={bgColor}
         />
         <motion.div
           className="w-[130px] hidden lg:block absolute bottom-0 -left-[138px] "

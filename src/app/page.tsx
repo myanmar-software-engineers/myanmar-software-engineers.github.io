@@ -7,6 +7,7 @@ import LanguageIconSection from "@/components/MSE/LanguageIconSection";
 import MmsweTypoSection from "@/components/MSE/MmsweTypoSection";
 import PlatformSection from "@/components/MSE/PlatformSection";
 import APP_CONFIG from "@/config/config";
+import { generateColor } from "@/utils";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,17 +16,19 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const bgColor = `${generateColor()} bg-opacity-20`;
+
   return (
     <>
       <Container withPadding>
         {/* Home Section: Start */}
-        <HomeSection />
+        <HomeSection bgColor={bgColor} />
         {/* Home Section: Finished */}
 
         <SpacingDivider />
 
         {/* Joined Section: Start */}
-        <JoinSection />
+        <JoinSection bgColor={bgColor} />
         {/* Joined Section: Finished */}
 
         <SpacingDivider size="lg" />
@@ -35,7 +38,7 @@ export default function HomePage() {
         {/* LanguageIcon Section: Start */}
         <SpacingDivider size="sm" />
 
-        <LanguageIconSection />
+        <LanguageIconSection bgColor={bgColor} />
         {/* LanguageIcon Section: Finished */}
 
         <SpacingDivider size="sm" />
@@ -48,7 +51,7 @@ export default function HomePage() {
 
       <Container withPadding>
         {/* Platform Section: Start */}
-        <PlatformSection />
+        <PlatformSection  bgColor={bgColor} />
         {/* Platform Section: Start */}
       </Container>
     </>

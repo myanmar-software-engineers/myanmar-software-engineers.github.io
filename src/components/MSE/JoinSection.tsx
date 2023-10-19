@@ -9,7 +9,7 @@ import APP_CONFIG from "@/config/config";
 import { cn } from "@/utils";
 import FacebookArrows from "../Ui/Arrows/FacebookArrows";
 
-const JoinSection = () => {
+const JoinSection = ({ bgColor = "bg-indigo-500" }: { bgColor?: string }) => {
   return (
     <motion.div
       transition={{ staggerChildren: 0.017, delay: 0.6 }}
@@ -49,7 +49,8 @@ const JoinSection = () => {
       >
         <SquareBox
           className={cn(
-            "mx-auto text-center flex flex-col justify-center items-center"
+            "mx-auto text-center flex flex-col justify-center items-center",
+            bgColor
           )}
         >
           <TitleText className="mb-5 relative lg:-top-5">

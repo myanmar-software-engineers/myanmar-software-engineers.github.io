@@ -16,7 +16,7 @@ const SquareBox = ({ children, className = "" }: TSquareBox) => {
       )}
     >
       <div className={cn(styles.squareAbsolute, styles.squareBackground)}></div>
-      <div>{children}</div>
+      <div className="relative">{children}</div>
     </div>
   );
 };
