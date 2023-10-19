@@ -74,7 +74,7 @@ const HomeSection = () => {
           </motion.h2>
         ))}
       </div>
-      <motion.div className="relative flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 mt-5 lg:mt-0">
+      <motion.div className="relative flex-1 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-4 mt-5 lg:mt-0">
         <Card
           icon={<DiCode className="inline-block mr-3" />}
           title="Dev-Profiles"

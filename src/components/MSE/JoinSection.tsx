@@ -13,7 +13,7 @@ const JoinSection = () => {
   return (
     <motion.div
       transition={{ staggerChildren: 0.017, delay: 0.6 }}
-      className="grid grid-cols-1 lg:grid-cols-2 gap-5 relative overflow-hidden"
+      className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-5 relative overflow-hidden"
     >
       <motion.div
         initial={{ opacity: 0, y: 8 }}

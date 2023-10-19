@@ -21,9 +21,12 @@ import {
   IoLogoSass,
   IoLogoStackoverflow,
   IoLogoStencil,
+  IoLogoVercel,
   IoLogoVue,
   IoLogoWebComponent,
 } from "react-icons/io5";
+
+import { TbBrandFlutter, TbBrandBootstrap } from "react-icons/tb";
 
 export const iconListData = [
   {
@@ -46,6 +49,11 @@ export const iconListData = [
     title: "Android",
     icon: IoLogoAndroid,
   },
+  {
+    title: "Flutter",
+    icon: TbBrandFlutter,
+  },
+
   {
     title: "Python",
     icon: IoLogoPython,
@@ -107,6 +115,10 @@ export const iconListData = [
     icon: IoLogoOctocat,
   },
   {
+    title: "Bootstrap",
+    icon: TbBrandBootstrap,
+  },
+  {
     title: "Npm",
     icon: IoLogoNpm,
   },
@@ -121,5 +133,9 @@ export const iconListData = [
   {
     title: "Stackoverflow",
     icon: IoLogoStackoverflow,
+  },
+  {
+    title: "Vercel",
+    icon: IoLogoVercel,
   },
 ] as const;
