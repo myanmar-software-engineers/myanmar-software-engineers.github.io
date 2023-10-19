@@ -27,11 +27,10 @@ export async function generateMetadata({
     openGraph: {
       title: `Profile | ${profile.name}`,
       description: `Profile | ${profile.description}`,
-      image: profile.image
+      image: !!profile.image
         ? profile.image
         : "https://mmswe.com/images/landing/galaxy.jpg",
       siteName: `https://mmswe.com/profile/${slug}`,
-      type: "content"
     },
   };
 }
