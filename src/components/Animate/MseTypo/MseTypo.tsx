@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { cn } from "@/utils";
-import { titleFont } from "@/fonts/fonts";
+import { titleFont, titleFontBold } from "@/fonts/fonts";
 
 export const strokeAnimation = {
   hidden: { strokeDashoffset: 650, strokeDasharray: 650 },
@@ -40,7 +40,7 @@ const MsoTypo = () => {
       <g id="TextGroup">
         <motion.text
           variants={strokeAnimation}
-          className={cn("st10 st11 st12", titleFont.className)}
+          className={cn("st10 st11 st12", titleFontBold.className)}
           transform="translate(10.957 106.424)"
         >
           {"M"}
@@ -68,7 +68,7 @@ const MsoTypo = () => {
         </text>
         <motion.text
           variants={strokeAnimation}
-          className={cn("st10 st11 st12", titleFont.className)}
+          className={cn("st10 st11 st12", titleFontBold.className)}
           transform="translate(272.74 108.424)"
         >
           {"E"}

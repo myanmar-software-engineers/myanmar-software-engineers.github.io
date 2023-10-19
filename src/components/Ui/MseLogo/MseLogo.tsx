@@ -5,10 +5,10 @@ const MseLogo = () => {
   return (
     <TitleText>
       <MseLink href="/">
-        <TitleText tag="span" className="text-xl font-bold">
+        <TitleText tag="span" className="text-xl" isBold>
           MM
         </TitleText>
-        <TitleText tag="span" className="text-md">
+        <TitleText tag="span" className="text-base">
           SWE.com
         </TitleText>
       </MseLink>
