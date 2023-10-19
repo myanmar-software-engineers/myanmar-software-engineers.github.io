@@ -34,7 +34,7 @@ const HorizontalWrapper: React.FC<THorizontalWrapper> = ({
   return (
     <div ref={containerRef}>
       <motion.div
-        className="relative z-10"
+        className="relative z-10 transition transform duration-700 ease-out "
         style={{
           translateX: xTransform,
           opacity: activeOpacity ? opacityTransforom : 1,
