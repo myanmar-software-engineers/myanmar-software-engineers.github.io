@@ -34,7 +34,7 @@ const MsoTypo = () => {
     >
       <style>
         {
-          '.st0{display:none}.st2{display:inline}.st3{opacity:.1}.st4{fill:#fff}.st6{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round}.st8{display:inline;fill:#fff}.st10{fill:none;stroke:#fff;stroke-width:2}.st12{font-size:110px}.st13{font-family:"PTMono-Regular"}.st14{font-size:46px}'
+          '.st0{display:none}.st2{display:inline}.st3{opacity:.1}.st4{fill:#fff}.st6{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round}.st8{display:inline;fill:#fff}.st10{fill:none;stroke:#fff;stroke-width:2}.st12{font-size:110px}.st14{font-size:46px}'
         }
       </style>
       <g id="TextGroup">
