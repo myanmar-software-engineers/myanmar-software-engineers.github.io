@@ -18,11 +18,11 @@ const ProfileCardList = ({ profiles }: TPropsProfileCardList) => {
         const bgColor = generateColor();
 
         return (
-          <div key={profile._id}>
+          <div key={profile._id} className="self-stretch">
             <Link href={`/profile/${profile.slugAsParams}`}>
               <SquareBox
                 className={cn(
-                  "transition ease-out cursor-pointer hover:opacity-80 hover:-translate-y-1 bg-opacity-30 min-h-[130px]",
+                  "w-full h-full transition ease-out cursor-pointer hover:opacity-80 hover:-translate-y-1 bg-opacity-30 min-h-[130px]",
                   bgColor
                 )}
               >
