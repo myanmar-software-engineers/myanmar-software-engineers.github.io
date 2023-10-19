@@ -14,6 +14,9 @@ const getBlogFromParams = async (slug: string) => {
   return blogDetail;
 };
 
+export const generateStaticParams = async () =>
+  allBlogs.map((blog) => ({ slug: blog.slugAsParams }));
+
 type TBlogDetailPageProps = {
   params: {
     slug: string;

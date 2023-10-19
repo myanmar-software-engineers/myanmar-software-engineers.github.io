@@ -17,7 +17,8 @@
     "start": "next start",
     "lint": "next lint",
     "lint-staged": "lint-staged — config .lintstagedrc",
-    "commit": "cz-customizable"
+    "commit": "cz-customizable",
+    "serve": "serve ./out"
   },
   "commit": "./node_modules/cz-customizable/standalone.js",
   "config": {

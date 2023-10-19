@@ -27,6 +27,9 @@ export async function generateMetadata({
   };
 }
 
+export const generateStaticParams = async () =>
+  allProfiles.map((profile) => ({ slug: profile.slugAsParams }));
+
 type TPProfileDetailPageProps = {
   params: {
     slug: string;
