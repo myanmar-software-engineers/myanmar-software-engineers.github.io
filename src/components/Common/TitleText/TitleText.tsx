@@ -1,11 +1,12 @@
 import { titleFont, titleFontBold } from "@/fonts/fonts";
 import { cn } from "@/utils";
-import { PropsWithChildren } from "react";
+import { MouseEvent, PropsWithChildren } from "react";
 
 type TTitleText = PropsWithChildren<{
   className?: string;
   tag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "span" | "div" | "p";
   isBold?: boolean;
+  onClick?: (event: MouseEvent) => void;
 }>;
 
 const TitleText: React.FC<TTitleText> = ({
@@ -13,6 +14,7 @@ const TitleText: React.FC<TTitleText> = ({
   children,
   tag = "h1",
   isBold = false,
+  onClick,
 }) => {
   const Component = tag;
   return (
@@ -23,6 +25,7 @@ const TitleText: React.FC<TTitleText> = ({
         isBold && titleFontBold.className,
         className
       )}
+      onClick={onClick}
     >
       {children}
     </Component>

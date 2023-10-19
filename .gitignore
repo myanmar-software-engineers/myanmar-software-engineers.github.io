@@ -37,3 +37,8 @@ next-env.d.ts
 
 # contentlayer
 .contentlayer
+
+# Dont need package locks
+yarn.lock
+package-lock.json
+pnpm-lock.yaml

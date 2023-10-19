@@ -24,6 +24,15 @@ export async function generateMetadata({
   return {
     title: `Profile | ${profile.name}`,
     description: `Profile | ${profile.description}`,
+    openGraph: {
+      title: `Profile | ${profile.name}`,
+      description: `Profile | ${profile.description}`,
+      image: profile.image
+        ? profile.image
+        : "https://mmswe.com/images/landing/galaxy.jpg",
+      siteName: `https://mmswe.com/profile/${slug}`,
+      type: "content"
+    },
   };
 }
 
