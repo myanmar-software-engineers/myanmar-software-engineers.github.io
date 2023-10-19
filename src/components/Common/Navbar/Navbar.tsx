@@ -24,7 +24,7 @@ const Navbar = () => {
 
         {/* ---- DarkMode: Start ---- */}
         <div className="hidden lg:flex flex flex-1 justify-end">
-          <MseLink href="/contact-us">Contact Us</MseLink>
+          <MseLink href="/">...</MseLink>
         </div>
         {/* ---- DarkMode: Finish ---- */}
       </Container>

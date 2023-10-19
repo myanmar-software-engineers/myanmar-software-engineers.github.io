@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { cn } from "@/utils";
+import { titleFont } from "@/fonts/fonts";
 
 export const strokeAnimation = {
   hidden: { strokeDashoffset: 650, strokeDasharray: 650 },
@@ -32,25 +34,31 @@ const MsoTypo = () => {
     >
       <style>
         {
-          '.st0{display:none}.st2{display:inline}.st3{opacity:.1}.st4{fill:#fff}.st6{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round}.st8{display:inline;fill:#fff}.st10{fill:none;stroke:#fff;stroke-width:2}.st11{font-family:"PTMono-Bold"}.st12{font-size:110px}.st13{font-family:"PTMono-Regular"}.st14{font-size:46px}'
+          '.st0{display:none}.st2{display:inline}.st3{opacity:.1}.st4{fill:#fff}.st6{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round}.st8{display:inline;fill:#fff}.st10{fill:none;stroke:#fff;stroke-width:2}.st12{font-size:110px}.st13{font-family:"PTMono-Regular"}.st14{font-size:46px}'
         }
       </style>
       <g id="TextGroup">
         <motion.text
           variants={strokeAnimation}
-          className="st10 st11 st12"
+          className={cn("st10 st11 st12", titleFont.className)}
           transform="translate(10.957 106.424)"
         >
           {"M"}
         </motion.text>
-        <text className="st4 st13 st14" transform="translate(87.933 59.278)">
+        <text
+          className={cn("st4 st13 st14", titleFont.className)}
+          transform="translate(87.933 59.278)"
+        >
           {"yanmar"}
         </text>
-        <text className="st4 st13 st14" transform="translate(340.562 108.983)">
+        <text
+          className={cn("st4 st13 st14", titleFont.className)}
+          transform="translate(340.562 108.983)"
+        >
           {"ngineers"}
         </text>
         <text
-          className="st4 st13"
+          className={cn("st4 st13", titleFont.className)}
           style={{
             fontSize: 43,
           }}
@@ -60,7 +68,7 @@ const MsoTypo = () => {
         </text>
         <motion.text
           variants={strokeAnimation}
-          className="st10 st11 st12"
+          className={cn("st10 st11 st12", titleFont.className)}
           transform="translate(272.74 108.424)"
         >
           {"E"}
