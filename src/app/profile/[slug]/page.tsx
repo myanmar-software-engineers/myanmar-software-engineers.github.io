@@ -1,5 +1,5 @@
 import Container from "@/components/Common/Container/Container";
-import { Mdx } from "@/components/Common/Mdx";
+import { Mdx } from "@/components/Common/Mdx/Mdx";
 import { allProfiles } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import { FC } from "react";

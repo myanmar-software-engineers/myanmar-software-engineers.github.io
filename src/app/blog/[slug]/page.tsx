@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { allBlogs } from "contentlayer/generated";
 import { notFound } from "next/navigation";
-import { Mdx } from "@/components/Common/Mdx";
 import Container from "@/components/Common/Container/Container";
+import { Mdx } from "@/components/Common/Mdx/Mdx";
 
 const getBlogFromParams = async (slug: string) => {
   const blogDetail = allBlogs.find((blog) => blog.slugAsParams === slug);
