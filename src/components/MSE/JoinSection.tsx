@@ -13,7 +13,6 @@ import Link from "next/link";
 const JoinSection = ({ bgColor = "bg-indigo-500" }: { bgColor?: string }) => {
   return (
     <motion.div
-      transition={{ staggerChildren: 0.017, delay: 0.6 }}
       className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-5 relative overflow-hidden"
     >
       <motion.div
@@ -46,7 +45,7 @@ const JoinSection = ({ bgColor = "bg-indigo-500" }: { bgColor?: string }) => {
 
       {/* Description Section: Start */}
       <motion.div
-        className="flex hover:-translate-y-1 duration-200 transition ease-out"
+        className="flex"
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0, transition: { delay: 0.7 } }}
       >

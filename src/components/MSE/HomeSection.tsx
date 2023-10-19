@@ -57,6 +57,7 @@ const Card = ({
 const HomeSection = ({ bgColor = "bg-indigo-500" }: { bgColor?: string }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.4, once: true });
+
   return (
     <motion.div
       ref={ref}
@@ -109,7 +110,7 @@ const HomeSection = ({ bgColor = "bg-indigo-500" }: { bgColor?: string }) => {
             transition: { delay: 0.7 },
           }}
         >
-          <TopArrow />
+          <TopArrow bgColor={bgColor}/>
         </motion.div>
       </motion.div>
     </motion.div>
