@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import HorizontalWrapper from "../Common/HorizontalWrapper/HorizontalWrapper";
 import { iconListData } from "@/data/IconList";
-import { opacityAnimation } from "@/data/animationVariants;";
+import { opacityAnimation } from "@/data/animationVariants";
 import SquareBox from "../Ui/SquareBox/SquareBox";
 import { cn, generateColor } from "@/utils";
 

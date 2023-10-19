@@ -1,5 +1,5 @@
 "use client";
-import { opacityAnimation } from "@/data/animationVariants;";
+import { opacityAnimation } from "@/data/animationVariants";
 import { titleFont } from "@/fonts/fonts";
 import { cn, generateColor } from "@/utils";
 import { motion, useInView } from "framer-motion";
