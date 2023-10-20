@@ -26,7 +26,7 @@ const ProfileCardList = ({ profiles }: TPropsProfileCardList) => {
                   bgColor
                 )}
               >
-                <div className="flex flex-row items-center  mb-2 space-x-2">
+                <div className="flex flex-row items-center mb-2 space-x-2">
                   <div
                     className={cn(
                       "flex justify-center items-center h-10 w-10 rounded-full overflow-hidden relative",
@@ -44,9 +44,11 @@ const ProfileCardList = ({ profiles }: TPropsProfileCardList) => {
                       profile.name?.trim()?.[0]
                     )}
                   </div>
-                  <TitleText tag="h4" className="text-base">
-                    {profile.name}
-                  </TitleText>
+                  <div className="flex-1">
+                    <TitleText tag="h4" className="text-base">
+                      {profile.name}
+                    </TitleText>
+                  </div>
                 </div>
                 <div className="mb-2">
                   {profile.tags?.slice(0, 8)?.map((tag) => (
