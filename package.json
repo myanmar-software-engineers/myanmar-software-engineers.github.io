@@ -35,7 +35,7 @@
     "date-fns": "^2.30.0",
     "framer-motion": "^10.16.4",
     "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
+    "lint-staged": "^15.0.2",
     "next": "13.5.4",
     "next-contentlayer": "^0.3.4",
     "react": "^18",
