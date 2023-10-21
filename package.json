@@ -33,6 +33,7 @@
     "contentlayer": "^0.3.4",
     "cz-customizable": "^7.0.0",
     "date-fns": "^2.30.0",
+    "fast-shuffle": "^6.0.1",
     "framer-motion": "^10.16.4",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",

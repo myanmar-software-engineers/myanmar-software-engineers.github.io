@@ -1,4 +1,5 @@
 import { Profile } from "contentlayer/generated";
+import { shuffle } from "fast-shuffle";
 
 export const getUniqueTags = (tags: string[]) => {
   const uniqueTags: string[] = [];
@@ -23,45 +24,15 @@ export const profileHelperService = (
     profile.tags = profileTags;
     tags.push(profileTags);
 
-    if (!!searchTag) {
-      let isAlreayIncludedInProfile = false;
+    let isAlreadyIncludedInProfile = false;
+
+    if (!!searchTag && !isAlreadyIncludedInProfile) {
       profileTags.forEach((pTag) => {
-        const profileTag = pTag.toLowerCase();
-        const sTagLowerCase = searchTag.toLowerCase();
+        if (isAlreadyIncludedInProfile) return;
 
-        if (isAlreayIncludedInProfile) return;
-
-        if (profileTag === sTagLowerCase) {
-          // exact match
+        if (checkIsFoundTag(pTag, searchTag)) {
           foundProfiles.push(profile);
-          isAlreayIncludedInProfile = true;
-        } else if (
-          profileTag === sTagLowerCase + "js" ||
-          profileTag === sTagLowerCase + ".js"
-        ) {
-          // try add js or .js extension to search tag
-          foundProfiles.push(profile);
-          isAlreayIncludedInProfile = true;
-        } else if (
-          profileTag === sTagLowerCase.replace(/\.js$/, "") ||
-          profileTag === sTagLowerCase.replace(/js$/, "")
-        ) {
-          // try remove js or .js extension from search tag
-          foundProfiles.push(profile);
-          isAlreayIncludedInProfile = true;
-        } else if (
-          profileTag + "js" === sTagLowerCase ||
-          profileTag + ".js" === sTagLowerCase
-        ) {
-          foundProfiles.push(profile);
-          isAlreayIncludedInProfile = true;
-        } else if (
-          profileTag === sTagLowerCase.replace(/\.js$/, "") + "js" ||
-          profileTag === sTagLowerCase.replace(/js$/, "") + ".js"
-        ) {
-          // try swap .js and js extension
-          foundProfiles.push(profile);
-          isAlreayIncludedInProfile = true;
+          isAlreadyIncludedInProfile = true;
         }
       });
     }
@@ -70,7 +41,37 @@ export const profileHelperService = (
   const uniqueTags = getUniqueTags(tags.flat(1));
 
   return {
-    foundProfiles: !!searchTag ? foundProfiles : profiles,
+    foundProfiles: shuffle(!!searchTag ? foundProfiles : profiles),
     uniqueTags,
   };
+};
+
+export const checkIsFoundTag = (profileTag: string, searchTag: string) => {
+  const sTagLowerCase = searchTag.toLowerCase();
+  const pTagLowerCase = profileTag.toLowerCase();
+
+  const isExactMatch = pTagLowerCase === searchTag;
+  if (isExactMatch) return true;
+
+  const isWithJsOrDotJSMatch =
+    pTagLowerCase === sTagLowerCase + "js" ||
+    pTagLowerCase === sTagLowerCase + ".js";
+  if (isWithJsOrDotJSMatch) return true;
+
+  const isRemoveJsOrDotJsExtensionMatch =
+    pTagLowerCase === sTagLowerCase.replace(/\.js$/, "") ||
+    pTagLowerCase === sTagLowerCase.replace(/js$/, "");
+  if (isRemoveJsOrDotJsExtensionMatch) return true;
+
+  const isAddJsOrDotJsToProfileTagMatch =
+    pTagLowerCase + "js" === sTagLowerCase ||
+    pTagLowerCase + ".js" === sTagLowerCase;
+  if (isAddJsOrDotJsToProfileTagMatch) return true;
+
+  const isTrySwapDotJsAndJsExtMatch =
+    pTagLowerCase === sTagLowerCase.replace(/\.js$/, "") + "js" ||
+    pTagLowerCase === sTagLowerCase.replace(/js$/, "") + ".js";
+  if (isTrySwapDotJsAndJsExtMatch) return true;
+
+  return false;
 };

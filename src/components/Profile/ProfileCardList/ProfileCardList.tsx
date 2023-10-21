@@ -4,17 +4,18 @@ import SpacingDivider from "@/components/Common/SpacingDivider/SpacingDivider";
 import TitleText from "@/components/Common/TitleText/TitleText";
 import SquareBox from "@/components/Ui/SquareBox/SquareBox";
 import { cn, generateColor } from "@/utils";
-import { profileHelperService } from "@/utils/profileHelper";
+import { checkIsFoundTag, profileHelperService } from "@/utils/profileHelper";
 import { Profile } from "contentlayer/generated";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
+import { IoPeople } from "react-icons/io5";
 
 type TPropsProfileCardList = {
   profiles: Profile[];
 };
 
-const Tag = ({ tag }: { tag: string }) => {
+const Tag = ({ tag, searchTag }: { tag: string; searchTag: string }) => {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -24,8 +25,10 @@ const Tag = ({ tag }: { tag: string }) => {
   return (
     <TitleText
       className={cn(
-        "inline-block cursor-pointer text-[10px] px-2 py-1 rounded-full mb-1 mr-[4px] bg-opacity-50 hover:bg-opacity-80",
-        generateColor()
+        "inline-block cursor-pointer text-[10px] px-2 py-1 rounded-full mb-1 mr-[5px] bg-opacity-50 hover:bg-opacity-90",
+        generateColor(),
+        checkIsFoundTag(tag, searchTag) &&
+          "bg-green-600 bg-opacity-100 outline-dashed outline-2 outline-offset-2 "
       )}
       key={tag}
       tag="span"
@@ -52,9 +55,14 @@ const ProfileCardList = ({ profiles }: TPropsProfileCardList) => {
     <>
       <div>
         {uniqueTags.map((tag) => (
-          <Tag key={tag} tag={tag} />
+          <Tag key={tag} tag={tag} searchTag={searchTag} />
         ))}
       </div>
+
+      <TitleText tag="h3" className="text-sm mt-2">
+        <IoPeople className="inline-block -top-[2px] mx-2 relative" />
+        Total Profiles :{filteredProfiles.length}
+      </TitleText>
 
       <SpacingDivider size="lg" />
 
@@ -96,8 +104,8 @@ const ProfileCardList = ({ profiles }: TPropsProfileCardList) => {
                     </div>
                   </div>
                   <div className="mb-2">
-                    {profile.tags?.slice(0, 8)?.map((tag) => (
-                      <Tag key={tag} tag={tag} />
+                    {profile.tags?.map((tag) => (
+                      <Tag key={tag} tag={tag} searchTag={searchTag} />
                     ))}
                   </div>
                   <TitleText
