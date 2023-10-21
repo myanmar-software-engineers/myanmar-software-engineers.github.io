@@ -40,9 +40,14 @@ export const profileHelperService = (
 
   const uniqueTags = getUniqueTags(tags.flat(1));
 
+  const searchedTags = !!searchTag
+    ? uniqueTags.filter((tag) => checkIsFoundTag(tag, searchTag))
+    : [];
+
   return {
     foundProfiles: shuffle(!!searchTag ? foundProfiles : profiles),
     uniqueTags,
+    searchedTags,
   };
 };
 
