@@ -9,7 +9,8 @@ import { Profile } from "contentlayer/generated";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { IoPeople } from "react-icons/io5";
+import { MouseEvent, useCallback } from "react";
+import { IoClose, IoPeople } from "react-icons/io5";
 
 type TPropsProfileCardList = {
   profiles: Profile[];
@@ -18,24 +19,31 @@ type TPropsProfileCardList = {
 const Tag = ({ tag, searchTag }: { tag: string; searchTag: string }) => {
   const searchParams = useSearchParams();
   const router = useRouter();
+  const isTagActive = checkIsFoundTag(tag, searchTag);
 
-  const tmpSearchParam = new URLSearchParams(searchParams.toString());
-  tmpSearchParam.set("tag", tag);
+  const onClickTag = useCallback(
+    (e: MouseEvent) => {
+      e.preventDefault();
+      const tmpSearchParam = new URLSearchParams(searchParams.toString());
+
+      tmpSearchParam.set("tag", !isTagActive ? tag : "");
+
+      router.push(`/profile?${tmpSearchParam.toString()}`);
+    },
+    [isTagActive, router, searchParams, tag]
+  );
 
   return (
     <TitleText
       className={cn(
         "inline-block cursor-pointer text-[10px] px-2 py-1 rounded-full mb-1 mr-[5px] bg-opacity-50 hover:bg-opacity-90",
         generateColor(),
-        checkIsFoundTag(tag, searchTag) &&
-          "bg-green-600 bg-opacity-100 outline-dashed outline-2 outline-offset-2 "
+        isTagActive &&
+          "bg-green-600 bg-opacity-100 outline-dashed outline-2 outline-offset-2 relative"
       )}
       key={tag}
       tag="span"
-      onClick={(e) => {
-        e.preventDefault();
-        router.push(`/profile?${tmpSearchParam.toString()}`);
-      }}
+      onClick={onClickTag}
     >
       {tag}
     </TitleText>
@@ -46,10 +54,11 @@ const ProfileCardList = ({ profiles }: TPropsProfileCardList) => {
   const searchParams = useSearchParams();
   const searchTag = searchParams.get("tag") ?? "";
 
-  const { uniqueTags, foundProfiles: filteredProfiles } = profileHelperService(
-    profiles,
-    searchTag
-  );
+  const {
+    uniqueTags,
+    foundProfiles: filteredProfiles,
+    searchedTags,
+  } = profileHelperService(profiles, searchTag);
 
   return (
     <>
@@ -59,10 +68,16 @@ const ProfileCardList = ({ profiles }: TPropsProfileCardList) => {
         ))}
       </div>
 
-      <TitleText tag="h3" className="text-sm mt-2">
-        <IoPeople className="inline-block -top-[2px] mx-2 relative" />
-        Total Profiles :{filteredProfiles.length}
-      </TitleText>
+      <div className="flex flex-col gap-3 md:flex-row mt-2 md:items-center">
+        <TitleText tag="h3" className="text-sm ">
+          <IoPeople className="inline-block -top-[2px] mx-2 relative" />
+          Total Profiles :{filteredProfiles.length}
+        </TitleText>
+
+        {searchedTags.map((tag) => (
+          <Tag key={tag} tag={tag} searchTag={searchTag} />
+        ))}
+      </div>
 
       <SpacingDivider size="lg" />
 
