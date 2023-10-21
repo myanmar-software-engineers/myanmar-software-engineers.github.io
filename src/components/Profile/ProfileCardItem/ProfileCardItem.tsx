@@ -26,7 +26,7 @@ const ProfileCardItem = ({
   const bgColor = generateColor();
 
   return (
-    <div key={_id} className="self-stretch">
+    <div key={_id} className="self-stretch animate-fadein">
       <Link href={`/profile/${slugAsParams}`}>
         <SquareBox
           className={cn(

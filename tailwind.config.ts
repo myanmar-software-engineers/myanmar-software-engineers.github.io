@@ -12,6 +12,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // that is animation class
+      animation: {
+        fadein: "fadeIn 0.5s ease-out forwards",
+      },
       colors: {
         primary: "#923293",
         secondary: "",
@@ -29,6 +33,14 @@ const config: Config = {
         wiggle: {
           "0%, 100%": { transform: "rotate(-3deg)" },
           "50%": { transform: "rotate(3deg)" },
+        },
+        fadeIn: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
         },
       },
     },
