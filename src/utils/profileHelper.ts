@@ -50,7 +50,7 @@ export const checkIsFoundTag = (profileTag: string, searchTag: string) => {
   const sTagLowerCase = searchTag.toLowerCase();
   const pTagLowerCase = profileTag.toLowerCase();
 
-  const isExactMatch = pTagLowerCase === searchTag;
+  const isExactMatch = pTagLowerCase === sTagLowerCase;
   if (isExactMatch) return true;
 
   const isWithJsOrDotJSMatch =
