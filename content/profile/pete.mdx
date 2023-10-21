@@ -1,0 +1,71 @@
+---
+name: Peter Aung
+description: Web Developer, Tech and Science enthusiast (nerd 🤓). Love exploring a bunch of technical stuff which my brain can't handle :3
+image: "https://avatars.githubusercontent.com/u/88699874"
+tags:
+  - JavaScript
+  - ReactJS
+  - React Native
+  - NodeJS
+  - PHP
+---
+
+import {
+  IoLogoReact,
+  IoLogoJavascript,
+  IoLogoNodejs,
+  IoLogoFacebook,
+  IoLogoTwitter,
+} from "react-icons/io5";
+
+<div class="flex flex-col justify-center items-center md:h-[60vh] min-h-[300px] gap-12">
+  <div class="text-center text-2xl animate-[wiggle_1s_ease-in-out_infinite]">Beware!!!</div>
+  <div>
+    <div class="bg-white amber-500 max-w-[600px] text-black p-3 pb-5 rounded-md shadow-md animate-[spin_0.2s_ease-in-out_1]">
+        <div class="text-center mx-auto border-4 border-black py-2 mb-5">
+         <p class="text-4xl mb-3">Wanted!</p>
+         <div class="bg-black text-white mx-5 py-2" style={{clipPath: "polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%)"}}>Code or Debug!</div>
+        </div>
+        <div>
+          <img src="https://scontent.frgn2-1.fna.fbcdn.net/v/t39.30808-6/352494183_809966387369993_8587625321287135037_n.jpg?stp=dst-jpg_e15_q60_s750x1335_tt1_u&efg=eyJ1cmxnZW4iOiJ1cmxnZW5fZnJvbV91cmwifQ&_nc_cid=0&_nc_ad=z-m&_nc_rml=0&_nc_ht=scontent.frgn2-1.fna&_nc_cat=104&_nc_ohc=_791acnG3u0AX9TAuxN&ccb=1-7&_nc_sid=5f2048&oh=00_AfAMcndxCz4mjDHFurbzOaDUiu_J5Xy07iP07RVSF2S4xg&oe=65396DAE" class="h-32 mx-auto rounded-md grayscale" />
+        </div>
+        <div>
+            <table class="w-[100%] mt-5">
+                <tr class="h-[35px]">
+                    <td class="text-right pr-2 sm:w-[50%] w-[35%]">Name:</td>
+                    <td>Peter Aung</td>
+                </tr>
+                <tr class="h-[35px]">
+                    <td class="text-right pr-2">Age:</td>
+                    <td>{(new Date()).getMonth() > 9 ? (new Date()).getFullYear() - 2006: (new Date()).getFullYear() - 2007}</td>
+                </tr>
+                <tr class="h-[35px]">
+                    <td class="text-right pr-2 pb-6">About:</td>
+                    <td class="">Web developer specializing in JavaScript (MERN) Stack</td>
+                </tr>
+                <tr class="h-[35px]">
+                    <td class="text-right pr-2">Weapons:</td>
+                    <td class="flex gap-2 items-end pt-2"> <IoLogoJavascript class="w-6 h-6" /> <IoLogoReact class="w-6 h-6" /> <IoLogoNodejs class="w-6 h-6"/></td>
+                </tr>
+                 <tr class="h-[40px]">
+                    <td class="text-right pr-2 pt-2 sm:block hidden">Recently Seen Locations:</td>
+                    <td class="text-right pr-2 sm:hidden block">Recent Locations:</td>
+                    <td> 
+                        <a href="https://fb.com/100050699178950" target="blank">
+                        <IoLogoFacebook class="w-6 h-6 inline-block mr-2" />
+                        </a>
+                        <a href="https://twitter.com/peterhyper_aung" target="blank">
+                        <IoLogoTwitter  class="w-6 h-6 inline-block" />
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+        
+        {/* <div class="w-[100%] h-[100%] bg-white absolute -rotate-3"></div> */}
+    </div>
+
+  </div>
+
+</div>
