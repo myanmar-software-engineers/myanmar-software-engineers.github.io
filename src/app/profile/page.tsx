@@ -10,6 +10,11 @@ import { profileHelperService } from "@/utils/profileHelper";
 export const metadata: Metadata = {
   title: `Profile List | ${APP_CONFIG.title}`,
   description: APP_CONFIG.description,
+  openGraph: {
+    title: `Profile List | ${APP_CONFIG.title}`,
+    description: APP_CONFIG.description,
+    images: "https://mmswe.com/images/landing/galaxy.jpg",
+  },
 };
 
 const getAllProfileList = async () => {

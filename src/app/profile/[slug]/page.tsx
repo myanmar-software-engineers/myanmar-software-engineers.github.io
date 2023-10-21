@@ -1,6 +1,7 @@
 import Container from "@/components/Common/Container/Container";
 import { Mdx } from "@/components/Common/Mdx/Mdx";
 import SpacingDivider from "@/components/Common/SpacingDivider/SpacingDivider";
+import TitleText from "@/components/Common/TitleText/TitleText";
 import { allProfiles } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import { FC } from "react";
@@ -28,7 +29,7 @@ export async function generateMetadata({
     openGraph: {
       title: `Profile | ${profile.name}`,
       description: `Profile | ${profile.description}`,
-      image: !!profile.image
+      images: !!profile.image
         ? profile.image
         : "https://mmswe.com/images/landing/galaxy.jpg",
       siteName: `https://mmswe.com/profile/${slug}`,
@@ -52,7 +53,11 @@ const PProfileDetailPage: FC<TPProfileDetailPageProps> = async ({
 
   return (
     <Container>
-      <Mdx code={profile.body.code} />
+      <Mdx
+        code={profile.body.code}
+        extraText={`${profile.name} | ${profile.description}`}
+      />
+
       <SpacingDivider size="lg" />
     </Container>
   );
