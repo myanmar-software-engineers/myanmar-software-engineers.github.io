@@ -1,8 +1,7 @@
-
 const Contact = () => {
   return (
-    <div class=" w-full h-auto items-center flex-wrap flex-col flex gap-4 p-[1rem]  ">
-      <div class=" flex justify-center p-[1rem] bg-[#1a1b27] text-[#6899eb] border rounded w-full items-center ">
+    <div className=" w-full h-auto items-center flex-wrap flex-col flex gap-4 p-[1rem]  ">
+      <div className=" flex justify-center p-[1rem] bg-[#1a1b27] text-[#6899eb] border rounded w-full items-center ">
         <p>This developer is too lazy to descripe himself!</p>
       </div>
 
@@ -20,7 +19,7 @@ const Contact = () => {
         />
       </div>
 
-      <div class="felx p-[1rem] bg-[#1a1b27] text-[#6899eb] border rounded w-full ">
+      <div className="felx p-[1rem] bg-[#1a1b27] text-[#6899eb] border rounded w-full ">
         <ul>
           <li>
             <a href="https://github.com/lizzy-km">GitHub - lizzy-km</a>
