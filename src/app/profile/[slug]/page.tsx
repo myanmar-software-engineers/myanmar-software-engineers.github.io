@@ -2,6 +2,7 @@ import Container from "@/components/Common/Container/Container";
 import { Mdx } from "@/components/Common/Mdx/Mdx";
 import SpacingDivider from "@/components/Common/SpacingDivider/SpacingDivider";
 import TitleText from "@/components/Common/TitleText/TitleText";
+import Vince from "@/components/Profile/Vince/Vince";
 import { allProfiles } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import { FC } from "react";

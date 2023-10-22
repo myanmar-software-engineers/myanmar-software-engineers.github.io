@@ -10,6 +10,101 @@
   );
 }
 
+.trn-4 {
+  transition: all .4s ease;
+}
+
+.bg-blur {
+  background-color: #1111112d;
+  backdrop-filter: blur(8px);
+}
+
+.loader-bg {
+  background-color: #1111112d;
+  backdrop-filter: blur(8px) grayscale(80%) saturate(0) ;
+}
+
+.bg-top {
+  background-color: #1111112d;
+}
+
+.pf-shadow {
+  box-shadow: inset 0 0 4px 1px #111;
+}
+
+.pf-shadow img {
+  box-shadow: inset 0 0 8px 1px #111;
+}
+
+.name h1 {
+  cursor: pointer;
+  font-size: 4rem;
+  font-weight: bold;
+  transition: all .4s ease;
+  margin-top: -10px;
+}
+
+.name h1:hover {
+  color: aqua;
+  margin-top: -40px;
+}
+
+.loaderText {
+  font-size: 5rem;
+  margin-bottom: -100px;
+  z-index: 99;
+  animation: bounce 1.2s infinite;
+  top: 0;
+  left: 48%;
+}
+
+@keyframes bounce {
+  0% { top: 0 }
+  50% { top: -50% }
+  100% { top: 0 }
+}
+
+.loader {
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  transform-origin: 50% 50%;
+  transform: perspective(200px) rotateX(66deg);
+  animation: spinner-wiggle 1.2s infinite;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 4px solid #0000;
+  animation: spinner-spin 1.2s cubic-bezier(0.6, 0.2, 0, 0.8) infinite,
+    spinner-fade 1.2s linear infinite;
+}
+.loader:before {
+  border-top-color: #fff;
+}
+.loader:after {
+  border-top-color: #ff3d00;
+  animation-delay: 0.4s;
+}
+
+@keyframes spinner-spin {
+  100% { transform: rotate(360deg)}
+}
+@keyframes spinner-fade {
+  25%, 75% { opacity: 0.1}
+  50% { opacity: 1 }
+}
+    
+
 .ph-container {  
   max-height: 700px;
   height: 80vh;
