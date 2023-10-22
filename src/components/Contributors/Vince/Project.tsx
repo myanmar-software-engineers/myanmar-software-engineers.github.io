@@ -43,7 +43,7 @@ const Project = () => {
         <iframe
           className=" w-[100%] h-[600px] "
           src="https://themoviedb-org.vercel.app/"
-          frameborder="0"
+          frameBorder="0"
         />
       ) : (
         <Contact />

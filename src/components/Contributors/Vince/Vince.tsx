@@ -5,14 +5,15 @@ import Loading from "./Loading";
 import Main from "./Main";
 
 const Vince = () => {
-  const [content, setCon] = useState(<Loading />);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setCon(<Main />);
-    }, 2000);
+      setLoading(false);
+    }, 1300);
   }, []);
-  return { content };
+
+  return loading ? <Loading /> : <Main />;
 };
 
 export default Vince;

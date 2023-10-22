@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Project from "./Project";
 
 const Main = () => {
@@ -11,11 +12,11 @@ const Main = () => {
           <h1>c</h1>
           <h1>e</h1>
         </div>
-        <div className="trn-4 cursor-pointer w-[200px] h-[200px] flex justify-center items-center pf-shadow bg-transparent hover:bg-cyan-500 rounded-full  ">
+        <div className="trn-4 cursor-pointer w-[200px] h-[200px] flex justify-center items-center pf-shadow bg-transparent hover:bg-cyan-500 rounded-full">
           <img
-            className=" trn-4 rounded-full hover:w-[80%] hover:mt-[-150px] hover:h-[80%] w-[100%] h-[100%] hover:rounded-full "
+            className="trn-4 rounded-full hover:w-[80%] hover:mt-[-150px] hover:h-[80%] w-[100%] h-[100%] hover:rounded-full "
             src="https://avatars.githubusercontent.com/u/74085442?v=4"
-            alt=""
+            alt="Vince"
           />
         </div>
 

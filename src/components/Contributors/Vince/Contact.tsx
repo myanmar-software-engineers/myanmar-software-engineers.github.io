@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 const Contact = () => {
   return (
     <div className=" w-full h-auto items-center flex-wrap flex-col flex gap-4 p-[1rem]  ">
