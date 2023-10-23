@@ -41,7 +41,6 @@ const useProfileHook = (initProfiles: Profile[], initSearchTag: string) => {
         checkIsFoundTag(tagName, tag)
       );
 
-      console.log("isAlreadySearched", isAlreadySearched);
       if (isAlreadySearched) {
         setSearchTag("");
         setSelectedTags((prev) => []);
