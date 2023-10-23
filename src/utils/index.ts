@@ -33,3 +33,11 @@ function getRandomItem(arr: string[]) {
 export function generateColor() {
   return getRandomItem(colors);
 }
+
+export function generateColorArray(maxLength: number) {
+  let colorArray: string[] = [];
+  for (let i = 0; i < maxLength; i++) {
+    colorArray.push(generateColor());
+  }
+  return colorArray;
+}

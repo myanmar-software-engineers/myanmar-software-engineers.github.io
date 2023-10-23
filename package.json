@@ -27,12 +27,14 @@
     }
   },
   "dependencies": {
+    "@splinetool/react-spline": "^2.2.6",
     "clsx": "^2.0.0",
     "commitlint": "^17.7.2",
     "commitlint-config-gitmoji": "^2.3.1",
     "contentlayer": "^0.3.4",
     "cz-customizable": "^7.0.0",
     "date-fns": "^2.30.0",
+    "fast-shuffle": "^6.0.1",
     "framer-motion": "^10.16.4",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
@@ -45,8 +47,10 @@
     "rehype-pretty-code": "^0.10.1",
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^4.0.0",
+    "sass": "^1.69.4",
     "shiki": "^0.14.5",
-    "tailwind-merge": "^1.14.0"
+    "tailwind-merge": "^1.14.0",
+    "typed.js": "^2.0.16"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -56,7 +60,7 @@
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
     "postcss": "^8",
-    "tailwindcss": "^3",
+    "tailwindcss": "^3.3.3",
     "typescript": "^5"
   }
 }

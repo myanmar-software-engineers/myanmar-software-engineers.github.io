@@ -4,9 +4,10 @@ import styles from "@/styles/styles";
 
 type TSquareBox = PropsWithChildren<{
   className?: string;
+  onClick?: () => void;
 }>;
 
-const SquareBox = ({ children, className = "" }: TSquareBox) => {
+const SquareBox = ({ children, className = "", onClick }: TSquareBox) => {
   return (
     <div
       className={cn(
@@ -14,6 +15,7 @@ const SquareBox = ({ children, className = "" }: TSquareBox) => {
         styles.paddingHelper,
         className
       )}
+      onClick={onClick}
     >
       <div className={cn(styles.squareAbsolute, styles.squareBackground)}></div>
       <div className="relative">{children}</div>

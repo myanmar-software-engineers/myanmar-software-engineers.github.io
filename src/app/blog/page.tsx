@@ -1,3 +1,4 @@
+import PageTransitionWrapper from "@/components/Animate/PageTransitionWrapper/PageTransitionWrapper";
 import BodyText from "@/components/Common/BodyText/BodyText";
 import Container from "@/components/Common/Container/Container";
 import TitleText from "@/components/Common/TitleText/TitleText";
@@ -12,12 +13,14 @@ export const metadata: Metadata = {
 
 const BlogListPage = () => {
   return (
-    <Container>
-      <SquareBox>
-        <TitleText className="mb-2"> Welcome to the Blogs Page... </TitleText>
-        <BodyText> Exciting blogs are on the horizon, stay tuned! </BodyText>
-      </SquareBox>
-    </Container>
+    <PageTransitionWrapper>
+      <Container>
+        <SquareBox>
+          <TitleText className="mb-2"> Welcome to the Blogs Page... </TitleText>
+          <BodyText> Exciting blogs are on the horizon, stay tuned! </BodyText>
+        </SquareBox>
+      </Container>
+    </PageTransitionWrapper>
   );
 };
 
