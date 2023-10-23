@@ -1,35 +1,33 @@
 import { cn } from "@/utils";
-import TitleText from "../TitleText/TitleText";
-import { IoClose } from "react-icons/io5";
-import { useRouter, useSearchParams } from "next/navigation";
 import { checkIsFoundTag } from "@/utils/profileHelper";
 import { MouseEvent, useCallback } from "react";
+import { IoClose } from "react-icons/io5";
+import TitleText from "../TitleText/TitleText";
 
 const Tag = ({
   tag,
   searchTag,
   bgColor,
   isShowClose = false,
+  onClick,
 }: {
   tag: string;
   searchTag: string;
   bgColor: string;
   isShowClose?: boolean;
+  onClick?: (tag: string) => void;
 }) => {
-  const searchParams = useSearchParams();
-  const router = useRouter();
   const isTagActive = checkIsFoundTag(tag, searchTag);
 
   const onClickTag = useCallback(
     (e: MouseEvent) => {
       e.preventDefault();
-      const tmpSearchParam = new URLSearchParams(searchParams.toString());
-
-      tmpSearchParam.set("tag", !isTagActive ? tag : "");
-
-      router.push(`/profile?${tmpSearchParam.toString()}`);
+      onClick?.(tag);
+      // const tmpSearchParam = new URLSearchParams(searchParams.toString());
+      // tmpSearchParam.set("tag", !isTagActive ? tag : "");
+      // router.push(`/profile?${tmpSearchParam.toString()}`);
     },
-    [isTagActive, router, searchParams, tag]
+    [onClick, tag]
   );
 
   return (
