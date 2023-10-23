@@ -1,3 +1,4 @@
+import PageTransitionWrapper from "@/components/Animate/PageTransitionWrapper/PageTransitionWrapper";
 import Container from "@/components/Common/Container/Container";
 import { Mdx } from "@/components/Common/Mdx/Mdx";
 import SpacingDivider from "@/components/Common/SpacingDivider/SpacingDivider";
@@ -51,14 +52,16 @@ const PProfileDetailPage: FC<TPProfileDetailPageProps> = async ({
   const profile = await getProfileFromParam(slug);
 
   return (
-    <Container>
-      <Mdx
-        code={profile.body.code}
-        extraText={`${profile.name} | ${profile.description}`}
-      />
+    <PageTransitionWrapper>
+      <Container>
+        <Mdx
+          code={profile.body.code}
+          extraText={`${profile.name} | ${profile.description}`}
+        />
 
-      <SpacingDivider size="lg" />
-    </Container>
+        <SpacingDivider size="lg" />
+      </Container>
+    </PageTransitionWrapper>
   );
 };
 export default PProfileDetailPage;

@@ -1,3 +1,4 @@
+"use client";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { cn } from "@/utils";
@@ -15,7 +16,7 @@ export const strokeAnimation = {
   },
 } as const;
 
-const MsoTypo = ({ bgColor = "bg-indigo-500" }: { bgColor?: string }) => {
+const MseTypo = ({ bgColor = "bg-indigo-500", isWhite = false }: { bgColor?: string, isWhite?: boolean }) => {
   const containerRef = useRef<SVGSVGElement>(null);
   const isInView = useInView(containerRef, { amount: 0.5 });
   const textColor = `${bgColor
@@ -24,7 +25,7 @@ const MsoTypo = ({ bgColor = "bg-indigo-500" }: { bgColor?: string }) => {
 
   const fillColor = `fill-white`;
 
-  const strokeColor = `${bgColor.replace(/bg/, "stroke")} opacity-80`;
+  const strokeColor = isWhite ? "stroke-white" : `${bgColor.replace(/bg/, "stroke")} opacity-80`;
 
   return (
     <motion.svg
@@ -83,4 +84,4 @@ const MsoTypo = ({ bgColor = "bg-indigo-500" }: { bgColor?: string }) => {
     </motion.svg>
   );
 };
-export default MsoTypo;
+export default MseTypo;
