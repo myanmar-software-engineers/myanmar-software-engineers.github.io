@@ -61,7 +61,7 @@ const useProfileHook = (initProfiles: Profile[], initSearchTag: string) => {
 
       setSearchTag(tagName);
     },
-    [profiles, searchTag, uniqueTags]
+    [profiles, searchedTags, uniqueTags]
   );
 
   const filteredProfiles = useMemo(() => {
