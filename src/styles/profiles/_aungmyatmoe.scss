@@ -1,0 +1,149 @@
+@property --scroll-position {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+@property --scroll-position-delayed {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@keyframes adjust-pos {
+  to {
+    --scroll-position: 1;
+    --scroll-position-delayed: 1;
+  }
+}
+
+:root {
+  animation: adjust-pos linear both;
+  animation-timeline: scroll(root);
+}
+
+body {
+  transition: --scroll-position-delayed 0.15s linear;
+  --scroll-velocity: calc(var(--scroll-position) - var(--scroll-position-delayed));
+}
+
+
+html {
+  background: #666;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  pointer-events: none;
+  line-height: 1;
+  display: block;
+}
+
+ul li {
+  display: block;
+  line-height: 1;
+}
+
+.panel {
+  scroll-snap-align: center;
+  height: 80dvh;
+  border: 2px solid #333;
+  background: rgb(0 0 0 / 0.15);
+  z-index: -1;
+}
+
+.panel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(30%);
+}
+
+@keyframes slide-up {
+  to {
+    translate: 0 var(--end-pos);
+  }
+}
+
+.titles {
+  position: fixed;
+  z-index: 2;
+  top: 50dvh;
+  font-size: 25dvh;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  animation: slide-up linear;
+  animation-timeline: scroll(root block);
+
+  font-family: impact;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  /* Calculate the part each child can occupy.
+      For 8 children, that’s 12.5%
+  */
+  --num-children: 8;
+  --num-children-1: calc(var(--num-children) - 1);
+  --size-per-child: calc(100% / var(--num-children));
+
+  /* Because the text needs to be in the dead center,
+     we need to shift up the whole thing by half the size per child.
+     If not, it would start with the top edge of the whole box
+     aligned to the center. We want the text to be centered.
+     So in the case of 8 items that is from -6.25% to to -(100% - 6.25%).
+     This range still spans 100% in total, but it is slightly shifted up.
+  */
+  --half-size-per-child: calc(var(--size-per-child) / 2);
+  --start-pos: calc(var(--half-size-per-child) * -1);
+  --end-pos: calc(-100% + var(--half-size-per-child));
+  translate: 0 var(--start-pos);
+}
+
+.titles.transparent {
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(255 255 255 / 0.7);
+  text-stroke: 1px rgb(255 255 255 / 0.7);
+}
+
+.titles.fill {
+  color: hotpink;
+
+  /* Determine which element is currently in view. We do this based
+     on the current scroll-distance (exposed via --y-pos) and how
+     much space each child takes up.
+  */
+  --y-per-child: calc(1 / var(--num-children));
+  --cur-child: calc((var(--scroll-position) / var(--y-per-child)) + 1);
+  --cur-child-1: calc(var(--cur-child) - 1);
+
+  /* To adjust the clip path we need to adjust the total range
+     that is spanned.
+  */
+  --clip-min: 0;
+  --clip-max: calc(100% - var(--size-per-child));
+  --clip-per-child: calc(var(--clip-max) / var(--num-children));
+  --fix: calc(var(--clip-per-child) / 8); /* Not sure why I need a fix like this ¯\_(ツ)_/¯ */
+  --extra: 1%;
+  clip-path: inset(
+                  calc((var(--cur-child-1) * var(--clip-per-child)) - var(--extra)) 0% calc((100% - (var(--cur-child) * var(--clip-per-child)) - var(--fix)) - var(--extra)) 0%
+  );
+}
+
+/* And now, for the late scrolling part …*/
+.titles li {
+  will-change: transform;
+  transform-origin: 50% 50%;
+  transform: skewY(calc(var(--scroll-velocity) * -75deg));
+}
