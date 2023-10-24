@@ -1,6 +1,9 @@
+"use client";
+
 import { cn } from "@/utils";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import TitleText from "../TitleText/TitleText";
 
 const components = {
   h1: ({ className, ...rest }: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -155,14 +158,34 @@ const components = {
 
 interface MdxProps {
   code: string;
+  extraText?: string;
 }
 
-export function Mdx({ code }: MdxProps) {
+export function Mdx({ code, extraText }: MdxProps) {
   const Component = useMDXComponent(code);
+  const [showExtraText, setShowExtraText] = useState(false);
+
+  useEffect(() => {
+    const mdxContainer = document.getElementById("mdx_container");
+    setTimeout(() => {
+      if (mdxContainer && !mdxContainer.innerHTML) {
+        setShowExtraText(true);
+      }
+    }, 300);
+    return () => {};
+  }, []);
 
   return (
-    <div className="mdx">
+    <div className="mdx" id="mdx_container">
       <Component components={components} />
+      {showExtraText && !!extraText ? (
+        <>
+          <TitleText>{extraText}</TitleText>
+          <TitleText tag="h2" className="text-sm mt-5">
+            Note: The profile owner needs to update their Profile Detail Page
+          </TitleText>
+        </>
+      ) : null}
     </div>
   );
 }

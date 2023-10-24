@@ -1,7 +1,8 @@
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { cn } from "@/utils";
+"use client";
 import { titleFont, titleFontBold } from "@/fonts/fonts";
+import { cn } from "@/utils";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export const strokeAnimation = {
   hidden: { strokeDashoffset: 650, strokeDasharray: 650 },
@@ -15,16 +16,20 @@ export const strokeAnimation = {
   },
 } as const;
 
-const MsoTypo = ({ bgColor = "bg-indigo-500" }: { bgColor?: string }) => {
+const MseTypo = ({
+  bgColor = "bg-indigo-500",
+  isWhite = false,
+}: {
+  bgColor?: string;
+  isWhite?: boolean;
+}) => {
   const containerRef = useRef<SVGSVGElement>(null);
   const isInView = useInView(containerRef, { amount: 0.5 });
-  const textColor = `${bgColor
-    .replace(/bg/, "text")
-    .replace(/-400/, "")} opacity-90`;
-
   const fillColor = `fill-white`;
 
-  const strokeColor = `${bgColor.replace(/bg/, "stroke")} opacity-80`;
+  const strokeColor = isWhite
+    ? "stroke-white"
+    : `${bgColor.replace(/bg/, "stroke")} opacity-80`;
 
   return (
     <motion.svg
@@ -33,7 +38,7 @@ const MsoTypo = ({ bgColor = "bg-indigo-500" }: { bgColor?: string }) => {
       xmlSpace="preserve"
       id="Layer_1"
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      animate={isWhite ? "visible" : isInView ? "visible" : "hidden"}
       x={0}
       y={0}
       viewBox="0 0 572.3 144.6"
@@ -83,4 +88,4 @@ const MsoTypo = ({ bgColor = "bg-indigo-500" }: { bgColor?: string }) => {
     </motion.svg>
   );
 };
-export default MsoTypo;
+export default MseTypo;

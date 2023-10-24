@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import APP_CONFIG from "@/config/config";
 import Favicons from "@/components/Favicons/Favicons";
 // Styles
-import "./globals.css";
+import "@/styles/globals.scss";
 import Footer from "@/components/Common/Footer/Footer";
 
 export const metadata: Metadata = {
