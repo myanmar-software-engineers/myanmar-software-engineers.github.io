@@ -13,6 +13,7 @@ export type TProfileCardItem = {
   tags?: string[];
   description?: string;
   searchTag?: string;
+  handleSearchTag?: (tag: string) => void;
 };
 const ProfileCardItem = ({
   _id,
@@ -22,6 +23,7 @@ const ProfileCardItem = ({
   image,
   tags,
   searchTag,
+  handleSearchTag,
 }: TProfileCardItem) => {
   const bgColor = generateColor();
 
@@ -30,7 +32,7 @@ const ProfileCardItem = ({
       <Link href={`/profile/${slugAsParams}`}>
         <SquareBox
           className={cn(
-            "w-full h-full transition ease-out cursor-pointer hover:opacity-80 hover:-translate-y-1 bg-opacity-40 min-h-[130px]",
+            "w-full h-full transition ease-out cursor-pointer hover:opacity-90 hover:-translate-y-1 bg-opacity-40 min-h-[130px]",
             bgColor
           )}
         >
@@ -65,6 +67,7 @@ const ProfileCardItem = ({
                 tag={tag}
                 searchTag={searchTag ?? ""}
                 bgColor={bgColor}
+                onClick={handleSearchTag}
               />
             ))}
           </div>

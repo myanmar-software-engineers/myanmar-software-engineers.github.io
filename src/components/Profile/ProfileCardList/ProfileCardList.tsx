@@ -97,6 +97,7 @@ const ProfileCardList = ({ profiles }: TPropsProfileCardList) => {
             description={profile.description}
             tags={profile.tags}
             searchTag={searchTag}
+            handleSearchTag={handleSearchTag}
           />
         ))}
       </div>
