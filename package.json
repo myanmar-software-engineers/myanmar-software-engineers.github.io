@@ -27,6 +27,7 @@
     }
   },
   "dependencies": {
+    "@formkit/auto-animate": "^0.8.0",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.488",
     "clsx": "^2.0.0",
