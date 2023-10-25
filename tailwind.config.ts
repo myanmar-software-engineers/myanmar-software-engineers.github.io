@@ -15,6 +15,8 @@ const config: Config = {
       // that is animation class
       animation: {
         fadein: "fadeIn 0.5s ease-out forwards",
+        shine: "shine 1s",
+        infinite_shine: "infinite_shine 3s infinite",
       },
       colors: {
         primary: "#923293",
@@ -39,6 +41,21 @@ const config: Config = {
             opacity: "0",
           },
           "100%": {
+            opacity: "1",
+          },
+        },
+        shine: {
+          "100%": { left: "125%" },
+        },
+        infinite_shine: {
+          "40%, 100%": {
+            opacity: "0",
+            left: "125%",
+          },
+          "0%": {
+            opacity: "0",
+          },
+          "10%": {
             opacity: "1",
           },
         },
