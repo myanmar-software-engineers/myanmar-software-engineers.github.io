@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.488",
     "clsx": "^2.0.0",
     "commitlint": "^17.7.2",
     "commitlint-config-gitmoji": "^2.3.1",
@@ -50,6 +51,7 @@
     "sass": "^1.69.4",
     "shiki": "^0.14.5",
     "tailwind-merge": "^1.14.0",
+    "three": "^0.157.0",
     "typed.js": "^2.0.16"
   },
   "devDependencies": {
