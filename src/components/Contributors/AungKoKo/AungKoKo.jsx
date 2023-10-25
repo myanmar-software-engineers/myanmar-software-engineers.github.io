@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState, useEffect, useRef } from "react";
 import autoAnimate from "@formkit/auto-animate";
@@ -24,7 +25,7 @@ const AungKoKo = () => {
       <div className="basis-1/2">
         <div className="flex flex-col items-start gap-1">
           <span className="font-bold text-xl">
-            <span className="text-2xl">👋</span>I'm
+            <span className="text-2xl">👋</span>I&apos;m
           </span>
           <h2 className="text-5xl font-bold">Aung Ko Ko</h2>
           <p className="text-xl font-semibold text-white/80">
