@@ -1,0 +1,59 @@
+.octagon {
+  width: 250px;
+  height: 250px;
+
+  .corner {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 10;
+  }
+
+  /* top-left */
+  .corner:nth-child(1) {
+    top: calc(0% - 20px);
+    left: calc(30% - 20px);
+  }
+
+  /* top-right */
+  .corner:nth-child(2) {
+    top: calc(0% - 20px);
+    left: calc(70% - 20px);
+  }
+
+  /* right-top */
+  .corner:nth-child(3) {
+    top: calc(30% - 20px);
+    right: calc(0% - 20px);
+  }
+
+  /* right-bottom */
+  .corner:nth-child(4) {
+    bottom: calc(30% - 20px);
+    right: calc(0% - 20px);
+  }
+
+  /* bottom-right */
+  .corner:nth-child(5) {
+    bottom: calc(0% - 20px);
+    left: calc(70% - 20px);
+  }
+
+  /* bottom-left */
+  .corner:nth-child(6) {
+    bottom: calc(0% - 20px);
+    left: calc(30% - 20px);
+  }
+
+  /* left-bottom */
+  .corner:nth-child(7) {
+    bottom: calc(30% - 20px);
+    left: calc(0% - 20px);
+  }
+
+  /* left-top */
+  .corner:nth-child(8) {
+    top: calc(30% - 20px);
+    left: calc(0% - 20px);
+  }
+}
