@@ -5,13 +5,13 @@ import React from "react";
 function About() {
   return (
     <>
-      <section className="about" id="about">
+      <section className="container mx-auto about" id="about">
         <h2 className="about__heading section-heading">About</h2>
         <div className="about__content">
           <div className="profile profile__fade-in">
             <div className="profile__picture ">
               <img
-                className="trn-4 rounded-full hover:w-[80%] hover:mt-[-150px] hover:h-[80%] w-[100%] h-[100%] hover:rounded-full"
+                className="trn-4 rounded-full hover:w-[45%] hover:mt-[-150px] hover:h-[45%] w-[100%] h-[50%] hover:rounded-full"
                 src="https://avatars.githubusercontent.com/u/36624809?v=4"
                 alt="peter"
               />

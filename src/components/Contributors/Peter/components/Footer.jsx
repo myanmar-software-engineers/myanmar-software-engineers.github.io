@@ -11,7 +11,7 @@ import { IconContext } from "react-icons";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="container mx-auto footer" id="contact">
       <a href="#hero">
         <div className="return-home">
           <svg

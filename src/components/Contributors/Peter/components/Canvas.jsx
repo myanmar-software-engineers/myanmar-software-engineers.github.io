@@ -101,7 +101,7 @@ function Canvas() {
     animate();
   }, []);
 
-  return <canvas id="canvas-1"></canvas>;
+  return <canvas id="canvas-1" className="container mx-auto"></canvas>;
 }
 
 export default Canvas;

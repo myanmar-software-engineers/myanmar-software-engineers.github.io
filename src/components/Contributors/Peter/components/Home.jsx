@@ -4,9 +4,9 @@ import Canvas from "./Canvas";
 
 function Home() {
   return (
-    <div className="hero" id="hero">
+    <div className="container mx-auto hero" id="hero">
       <Canvas />
-      <div className="heading">
+      <div className="container heading">
         <div className="heading__line-1">
           Hello, I&apos;m <span>Peter</span>
         </div>

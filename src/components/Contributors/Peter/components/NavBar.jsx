@@ -13,7 +13,7 @@ function NavBar() {
   }, []);
 
   const handleScroll = () => {
-    const sections = ["hero", "about", "projects"];
+    const sections = ["hero", "about", "contact"];
     const scrollPosition = window.scrollY;
 
     // Determine the active section based on the scroll position
@@ -26,7 +26,7 @@ function NavBar() {
     }
 
     // Show/hide the navigation bar based on the scroll position
-    if (scrollPosition > 100) {
+    if (scrollPosition > 250) {
       setShowNavBar(true);
     } else {
       setShowNavBar(false);
@@ -43,7 +43,11 @@ function NavBar() {
 
   return (
     <>
-      <header className={`navigation-bar ${showNavBar ? "show" : "hide"}`}>
+      <header
+        className={`navigation-bar container mx-auto ${
+          showNavBar ? "show" : "hide"
+        }`}
+      >
         <div className="navigation">
           <div
             className={`navigation__item ${
@@ -65,11 +69,11 @@ function NavBar() {
           </div>
           <div
             className={`navigation__item ${
-              activeSection === "projects" ? "navigation__item--active" : ""
+              activeSection === "contact" ? "navigation__item--active" : ""
             }`}
           >
-            <a href="#projects" onClick={() => handleItemClick("projects")}>
-              Projects
+            <a href="#contact" onClick={() => handleItemClick("contact")}>
+              Contact
             </a>
           </div>
         </div>

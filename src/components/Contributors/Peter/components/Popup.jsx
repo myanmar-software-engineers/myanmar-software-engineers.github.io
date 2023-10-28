@@ -199,7 +199,9 @@ function CanvasAnimation() {
     // Your canvas initialization code, if needed
   };
 
-  return <canvas id="canvas-2" className="canvas-animation" />;
+  return (
+    <canvas id="canvas-2" className="container mx-auto canvas-animation" />
+  );
 }
 
 export default CanvasAnimation;
