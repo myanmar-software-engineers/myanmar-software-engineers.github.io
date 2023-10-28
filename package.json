@@ -42,6 +42,7 @@
     "lint-staged": "^15.0.2",
     "next": "13.5.4",
     "next-contentlayer": "^0.3.4",
+    "package": "^1.0.1",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.11.0",
