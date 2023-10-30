@@ -40,7 +40,7 @@
     "framer-motion": "^10.16.4",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
-    "next": "13.5.4",
+    "next": "14.0.0",
     "next-contentlayer": "^0.3.4",
     "package": "^1.0.1",
     "react": "^18",
