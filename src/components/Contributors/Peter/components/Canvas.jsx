@@ -1,7 +1,5 @@
 "use-client";
-import { useEffect } from "react";
-// import { unstable_enableLog } from "react-dom";
-// unstable_enableLog("react.dom");
+import React, { useEffect } from "react";
 
 function Canvas() {
   useEffect(() => {

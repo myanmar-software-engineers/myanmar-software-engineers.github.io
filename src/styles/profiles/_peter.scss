@@ -1,14 +1,19 @@
 .peter {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   .loader {
     position: relative;
     margin: auto;
     box-sizing: border-box;
-    width: 120px;
-    height: 120px;
+    width: 360px;
+    height: 360px;
     border-radius: 50%;
     border: 4px solid rgba(255, 255, 255, 0.1);
     transform-origin: 50% 50%;
-    transform: perspective(200px) rotateX(66deg);
+    transform: perspective(900px) rotateX(66deg);
     animation: spinner-wiggle 1.2s infinite;
   }
 
@@ -34,12 +39,39 @@
   }
 
   .loaderText {
-    font-size: 5rem;
+    font-size: 11rem;
     margin-bottom: -100px;
     z-index: 99;
     animation: bounce 1.2s infinite;
     top: 0;
-    left: 48%;
+    left: 45%;
+  }
+
+  // position: relative;
+
+  @media (min-width: 768px) {
+    .loaderText {
+      left: 47%;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .loaderText {
+      font-size: 5rem;
+      left: 45%;
+    }
+    .loader {
+      width: 120px;
+      height: 120px;
+      transform: perspective(200px) rotateX(66deg);
+      animation: spinner-wiggle 1.2s infinite;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .loaderText {
+      left: 43%;
+    }
   }
 
   @keyframes spinner-spin {
@@ -66,8 +98,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 30px;
     width: 100%;
-    height: 150px;
     background-color: #282828;
     border-radius: 10px;
     border: 1px solid white;
@@ -77,10 +109,10 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
     width: 50%;
     height: 50px;
-    margin: 20px auto;
+    margin: 0px auto;
   }
 
   .socials__icons {
@@ -98,13 +130,15 @@
 
   .copyright {
     color: #fafafa;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
+    padding-bottom: 25px;
   }
 
   @media (max-width: 720px) {
     .footer {
-      height: 100px;
+      height: 150px;
+      gap: 10px;
     }
 
     .socials {
@@ -327,15 +361,15 @@
     font-family: montserrat, sans-serif;
     font-size: 14px;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
+
     background-color: #1a1a1a;
-    padding: 30px auto;
     outline: 45px solid #1a1a1b;
   }
 
   /* animation */
   .canvas-animation {
-    width: 95%;
+    width: 80%;
     height: 60%;
     position: fixed;
     top: 20%;
@@ -346,7 +380,6 @@
 
   @media (max-width: 450px) {
     .canvas-animation {
-      width: 90%;
       height: 45%;
       top: 25%;
     }
@@ -578,7 +611,7 @@
   .about__content {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 95%;
   }
 
   @media (max-width: 1300px) {
