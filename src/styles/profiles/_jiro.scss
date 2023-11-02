@@ -1,8 +1,7 @@
 .jiro{
 
-    background: linear-gradient(
-        to right, #c1b9b9,#36339b63,#3408a4b1
-    );
+    border:5px #14b8a7 solid;
+    border-radius: 20px;
     padding:20px;
     .profile{
         border-radius: 50%;
@@ -23,35 +22,63 @@
             color: white;
         }
       }
+      @keyframes heartcolor {
+        0% {
+            color: white;
+        }
+        50%{
+            color:  #e02514;
+    
+        }
+    
+        100%{
+            color: white;
+        }
+      }
     
     .desc{
         border-radius: 10px;
-        background-color: #14b8a7;
+        background-color: #156a62;
         margin:20px;
         width:300px;
         
     }
-    
-    
+    .about-header{
+        font-weight:bolder;
+        text-decoration: underline;
+    }
+    .personal-header{
+        font-size:20px;
+        font-weight:bolder;
+    }
     .info{
         width:50%;
         padding-bottom:20px;
         margin-bottom:20px;
         border-radius: 10px;
-        background-color: #1b158a;
+        background-color: #076057;
     }
     .familiar{
-        background-color: #3120a1!important;
+        background-color: #0b5f56!important;
     }
     .icon{
         height:50px;
         width:50px;
         margin:10px 10px;
     }
-    
+    .card{
+        border:3px solid rgba(255, 255, 255,0.5);
+        border-radius:10px;
+        padding:5px;
+        height:75px;
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: left;
+    }
     h4{
         text-align: center;
-        background-color: #00087d;
+        background-color: #14b8a7;
         width: 100%;
         padding:10px;
         margin:0;
@@ -90,10 +117,7 @@
     .detail{
         width:75%;
         margin:20px;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        border-left:white dashed 2px;
-        border-right:white dashed 2px;
+
 
     }
     .badge-container > p{
@@ -111,6 +135,11 @@
         cursor: pointer;
     }
     .about{
-        margin:40px;
+        margin-bottom:20px;
+    }
+    .j-footer{
+        position:absolute;
+        bottom:0;
+        width:100%;
     }
 }

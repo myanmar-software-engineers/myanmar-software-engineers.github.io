@@ -4,7 +4,7 @@ description: Friendly (not really) neighbourhood Java Developer.
 image: "https://avatars.githubusercontent.com/u/55285418?v=4"
 tags:
      - Java
-     - JavaScript
+     - Angular
      - Spring Boot
      - Frontend
      - Backend
@@ -12,11 +12,13 @@ tags:
      - NoSQL
 ---
 
+import Jiro from "@/components/Contributors/Jiro/Jiro";
+
 <div className = "jiro flex flex-col content-center items-center">
      <img src= "https://avatars.githubusercontent.com/u/55285418?v=4" className="profile"/>
      <div className = "flex flex-col content-center items-center text-center personal-detail">
           <p>Hi, I am <span className="name">Aung Khaing Khant</span></p>
-          <p>-- Son, Khit's Boyfriend, Software Developer, Coffee Addict. --</p>
+          <Jiro/>
      </div>
      <div className="quote">
           <p>I write mediocre code pretending I know what I'm doing</p> 
@@ -28,23 +30,37 @@ tags:
           </div>
           <div className = "flex flex-col content-top items-center text-center desc">
                     <h4>Current Tech Stack</h4>
-                    <p>Java, Angular, MySQL, Linux Servers</p>
+                    <p>Java, Angular, MySQL, Linux</p>
           </div>
      </div>
-     <div className="detail flex flex-row flex-wrap about content-center items-center">
-               I am currently writing RESTful APIs in Java using the Spring Framework, and consuming them from Angular.
+     <div className="detail flex flex-row flex-wrap justify-center content-left items-left">
+               <div className = "about">
+               <p className="text-center about-header">A little about Me </p>
+               I started coding since I was a teen, and it's the only thing I've been passionate about.
+               I have a bachelor's degree in Engineering, specializing in Computer Science. Very active on social media, especially Facebook.
+               I talk about Tech(sometimes), Music (I love both classical and pop.) and My Girlfriend (she's so fricking cute, man.).
+               At my current job, I am developing and maintaining RESTful APIs in Java using the Spring Framework, 
+               consuming their data from Angular front-end applications.
                As a senior developer, I also take part in system design decisions and stakeholder management.
+               I did some freelance work back in the day, and I'm open for commission today.
                Projects I am currently responsible for include:
-               {<ul>
-                    <li>e-Library Front-end & Admin Panel </li>
-                    <li>e-Payment Integration (Visa, Master, MPU, e-Money) </li>
-                    <li>News & Media Portal implementing Liferay CMS</li>
-               </ul>}
+               </div>
+               <div className="flex flex-col justify-left content-center gap-2">
+                    <div className = "card">
+                         e-Library System
+                    </div>
+                    <div className = "card">
+                         e-Payment Integration (Visa, Master, MPU, e-Money)
+                    </div>
+                    <div className = "card">     
+                         News & Media Portal implementing Liferay CMS
+                    </div>
+               </div>
      </div>
      <div className = "info familiar text-center">
-         <h4>Familiar With</h4>
+         <h4>I am familiar with</h4>
           <div className= "flex flex-wrap justify-center items-center badge-container gap-4">
-               <p > RESTful API Development</p>
+               <p> RESTful API Development</p>
                <p>Spring Boot</p>
                <p>Angular</p>
                <p>Software Development Lifecycle</p>
@@ -56,7 +72,7 @@ tags:
           </div>
      </div>
      <div className = "info text-center">
-         <h4>Interested In</h4>
+         <h4>I am interested in</h4>
           <div className= "flex flex-wrap justify-center items-center badge-container gap-4">
               <p> JavaScript</p>
               <p> Software Engineering </p>
@@ -64,6 +80,8 @@ tags:
               <p> Cloud Technologies </p>
               <p> DevOps </p>
               <p> DevSecOps </p>
+              <p> Natural Languages </p>
+              <p> Music </p>
           </div>
      </div>
 
@@ -71,4 +89,5 @@ tags:
                <a href="https://www.github.com/jironemo/" target= "_blank" className = "flex flex-row content-center items-center"> <img className = "icon" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"/></a>
                <a href="https://www.facebook.com/jiro.dev/" className = "flex flex-row content-center items-center"> <img className = "icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"/></a>
      </div>
+     <div className="j-footer text-center">Made with 💖 by Jiro.</div>
 </div>
