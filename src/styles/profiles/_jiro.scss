@@ -1,19 +1,116 @@
-.profile{
-    border-radius: 50%;
-    height:200px;
-    width:200px;
-}
+.jiro{
 
-.desc{
-    color:#31cd31;
-    border-radius: 40px;
-    border-bottom:5px solid rgb(115, 151, 171);
+    background: linear-gradient(
+        to right, #c1b9b9,#36339b63,#3408a4b1
+    );
     padding:20px;
-    margin-top:20px;
-}
+    .profile{
+        border-radius: 50%;
+        height:200px;
+        width:200px;
+    }
+ 
+      @keyframes quoteshadow {
+        0% {
+            color: white;
+        }
+        50%{
+            color:  #14b8a7;
+    
+        }
+    
+        100%{
+            color: white;
+        }
+      }
+    
+    .desc{
+        border-radius: 10px;
+        background-color: #14b8a7;
+        margin:20px;
+        width:300px;
+        
+    }
+    
+    
+    .info{
+        width:50%;
+        padding-bottom:20px;
+        margin-bottom:20px;
+        border-radius: 10px;
+        background-color: #1b158a;
+    }
+    .familiar{
+        background-color: #3120a1!important;
+    }
+    .icon{
+        height:50px;
+        width:50px;
+        margin:10px 10px;
+    }
+    
+    h4{
+        text-align: center;
+        background-color: #00087d;
+        width: 100%;
+        padding:10px;
+        margin:0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        font-weight: bolder;
+    }
+    
+    .desc p{
+        margin:20px;
+    }
+    
+    .personal-detail{
+        margin-top: 20px;
+    }
+    .badge-container{
+        padding:20px;
+        padding-bottom:0px;
+    }
+    .quote {
+        font-weight: bolder;
+        padding:20px;
+        margin:10px;
 
-.icon{
-    height:30px;
-    width:30px;
-    margin:10px 10px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        animation-name: quoteshadow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    .name{
+        font-size: 20px;
+        font-weight:900;
+        color:#14b8a7
+    }
+    .detail{
+        width:75%;
+        margin:20px;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        border-left:white dashed 2px;
+        border-right:white dashed 2px;
+
+    }
+    .badge-container > p{
+        padding:5px 10px;
+        border:0.5px solid white;
+        border-radius:5px;
+        background-color: transparent;
+        color:bisque;
+    }
+
+    .badge-container > p:hover{
+        background-color: white;
+        color:rgb(44, 44, 139);
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .about{
+        margin:40px;
+    }
 }
