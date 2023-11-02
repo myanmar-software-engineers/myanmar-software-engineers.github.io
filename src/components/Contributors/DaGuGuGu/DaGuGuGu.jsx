@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import { BiLogoGithub, BiLink } from "react-icons/bi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
@@ -13,11 +14,13 @@ const DaGuGuGu = () => {
         <img
           className="w-full h-[200px]"
           src="https://media0.giphy.com/media/RMwgs5kZqkRyhF24KK/giphy.gif?cid=ecf05e47xdckqv6kn5rc6of5baa793qgy7if69g574pn3sl2&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+          alt="DaGuGu"
         />
 
         <img
           className="rounded-full mx-3 -mt-[50px] mb-3 bg-green-300 h-[100px] w-[100px] border-2 "
           src="https://avatars.githubusercontent.com/u/71760983?s=400&u=b3a7e019faf9f06d3f499ae0486d5dd397617f77&v=4"
+          alt="DaGuGu"
         />
         <div className="mx-3">
           <h2 className="text-white  font-semibold ">Hein Htet Aung</h2>
@@ -82,7 +85,11 @@ const DaGuGuGu = () => {
                     }}
                     className="w-[100px] cursor-pointer h-[165px] bg-red-300 rounded-md overflow-hidden"
                   >
-                    <img className="w-full h-full" src={data.thumbnail} />
+                    <img
+                      className="w-full h-full"
+                      src={data.thumbnail}
+                      alt="DaGuGu"
+                    />
                   </div>
                   {data.title}
                 </div>
@@ -147,6 +154,7 @@ const Modal = ({ projects, show, setShowModal }) => {
           <img
             className={projects[current].imageClass}
             src={projects[current].image}
+            alt="DaGuGu"
           />
           <div
             onClick={() => setCurrent((prev) => prev + 1)}
