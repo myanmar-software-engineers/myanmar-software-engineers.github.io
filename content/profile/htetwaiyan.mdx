@@ -1,0 +1,136 @@
+---
+name: Htet Wai Yan
+description: MEAN stack developer and love to learn new techs.
+image: "https://avatars.githubusercontent.com/u/72548139?v=4"
+tags:
+  - Angular
+  - React
+  - Node.js
+  - Python
+  - Flutter
+  - AWS
+---
+
+import { FaFacebook, FaGithub, FaLinkedin, FaGlobe } from "react-icons/fa";
+
+<div className="w-full flex justify-center">
+  <div className="bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg w-fit p-10 rounded-lg">
+    <div className="flex flex-col items-center justify-center">
+     {/* Profile Image */}
+      <div className="mb-8 h-32 w-32 transform overflow-hidden rounded-full shadow-lg transition-transform hover:scale-105 relative">
+        <img
+          src="https://avatars.githubusercontent.com/u/72548139?v=4"
+          alt="Profile Image"
+          className="h-full w-full object-cover rounded-full"
+        />
+        <div className="ring-4 ring-purple-600 absolute inset-0 rounded-full"></div>
+      </div>
+       {/* Name */}
+      <div className="animate-bounce text-xl font-bold text-white">
+        HTET WAI YAN
+      </div>
+      {/* Terminal */}
+      <div className="min-w-400 mt-8 mb-8 w-full max-w-xl overflow-hidden rounded-lg bg-black font-mono text-white">
+        <div className="mx-auto w-full rounded border-black bg-black subpixel-antialiased shadow-2xl">
+          <div
+            className="flex h-6 items-center rounded-t border-b border-gray-500 bg-gray-100 text-center text-black"
+            id="headerTerminal"
+          >
+            <div
+              className="ml-2 flex h-3 w-3 items-center rounded-full border-red-900 bg-red-500 text-center shadow-inner"
+              id="closebtn"
+            ></div>
+            <div
+              className="ml-2 h-3 w-3 rounded-full border-yellow-900 bg-yellow-500 shadow-inner"
+              id="minbtn"
+            ></div>
+            <div
+              className="ml-2 h-3 w-3 rounded-full border-green-900 bg-green-500 shadow-inner"
+              id="maxbtn"
+            ></div>
+            <div className="mx-auto pr-16" id="terminaltitle">
+              <p className="text-center text-sm">hwy ~ zsh</p>
+            </div>
+          </div>
+          <div
+            className="h-auto bg-black pb-1 pl-1 pt-1 text-sm font-mono"
+            id="console"
+          >
+            <p className="pb-1">Last login: Thu Nov 05 09:11:04 on ttys002</p>
+            <div className="mb-4">
+              <span className="text-green-500 me-2">hwy@localhost:~$</span>
+              <span>profile</span>
+              <p className="pt-1">
+                MEAN stack developer with over 3 years of hands-on experience in
+                building scalable web applications.
+              </p>
+            </div>
+            <div className="mb-4">
+              <span className="text-green-500 me-2">hwy@localhost:~$</span>
+              <span>frameworks</span>
+              <p className="pt-1">Angular, React, Node.Js, Flutter</p>
+            </div>
+            <div className="mb-4">
+              <span className="text-green-500 me-2">hwy@localhost:~$</span>
+              <span>languages</span>
+              <p className="pt-1">HTML/CSS, Typescript, Python, Dart</p>
+            </div>
+            <div className="mb-4">
+              <span className="text-green-500 me-2">hwy@localhost:~$</span>
+              <span>contacts</span>
+              <p className="pt-1">
+                <a href="mailto:hwy.dev@gmail.com" target="_blank">
+                  hwy.dev@gmail.com
+                </a>
+              </p>
+            </div>
+            <div className="mb-2">
+              <span className="text-green-500 me-2">hwy@localhost:~$</span>
+              <span>girlfriend</span>
+              <p className="pt-1 text-red-500">
+                zsh: command not found: girlfriend
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Socials */}
+      <div className="flex space-x-4 text-white">
+      <a
+        href="https://www.facebook.com/htetwaiyan.gaegae/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm hover:scale-110 transform transition-transform duration-300"
+      >
+        <FaFacebook size={20} />
+      </a>
+      <a
+        href="https://github.com/HtetWaiYann"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm hover:scale-110 transform transition-transform duration-300"
+      >
+        <FaGithub size={20} />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/htet-waiyan/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm hover:scale-110 transform transition-transform duration-300"
+      >
+        <FaLinkedin size={20} />
+      </a>
+      <a
+        href="https://www.htetwaiyan.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm hover:scale-110 transform transition-transform duration-300"
+      >
+        <FaGlobe size={20} />
+      </a>
+    </div>
+    </div>
+
+  </div>
+</div>
