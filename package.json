@@ -30,8 +30,10 @@
     "@react-three/drei": "^9.88.7",
     "@react-three/fiber": "^8.15.8",
     "@react-three/postprocessing": "^2.15.8",
-    "@splinetool/react-spline": "^2.2.6",
     "@types/three": "^0.158.0",
+    "@formkit/auto-animate": "^0.8.0",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.488",
     "clsx": "^2.0.0",
     "commitlint": "^17.7.2",
     "commitlint-config-gitmoji": "^2.3.1",
@@ -55,13 +57,15 @@
     "shiki": "^0.14.5",
     "suspend-react": "^0.1.3",
     "tailwind-merge": "^1.14.0",
-    "three": "^0.158.0"
+    "three": "^0.158.0",
+    "typed.js": "^2.0.16"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10",
+    "daisyui": "^3.9.4",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
     "postcss": "^8",
