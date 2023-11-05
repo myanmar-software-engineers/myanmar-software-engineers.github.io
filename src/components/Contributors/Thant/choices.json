@@ -1,0 +1,67 @@
+[
+    {
+        "dialog": "ဘာာကိစ္စလည်းခင်ဗျ",
+        "image": "https://i.imgur.com/YUYwLuE.png"
+    },
+    {
+        "question1": "Profileအသေးစိတ်ကဘယ်မှာတုန်း",
+        "question2": "ဒါဘာကြီးလည်း ရှင်းပြပါအုန်း"
+    },
+    {
+        "answer1": {
+            "dialog": "အဲ့တာဆိုရင်တော့ မရေးထားဘူး",
+            "image": "https://i.imgur.com/bLB4Gzp.png"
+        },
+        "answer2": {
+            "dialog": "ဒါက Visual Novelပုံစံကို အတုယူထားတာ",
+            "image": "https://i.imgur.com/bLB4Gzp.png"
+        }
+    },
+    {
+        "dialog": "သူများတွေလိုလည်း Frontend ပရိုမဟုတ်တော့",
+        "image": "https://i.imgur.com/K9TNq53.png"
+    },
+    {
+        "dialog": "စိတ်ဝင်စားစရာကောင်းတဲ့အလန်းစားProfile မျိုးမရေးတတ်ပါဘူး",
+        "image": "https://i.imgur.com/K9TNq53.png"
+    },
+    {
+        "dialog": "ဒီအတိုင်းကြီး Plainပဲရေးရမှာလည်း ပျင်းဖို့ကောင်းတာဆိုတော့",
+        "image": "https://i.imgur.com/z5mBEFq.png"
+    },
+    {
+        "dialog": "နည်းနည်းလောက် လက်ဆော့လိုက်တယ်ဆိုတာမျိုးပေါ့",
+        "image": "https://i.imgur.com/fJvnZAH.png"
+    },
+    {
+        "question1": "ရေးထားတာလေး ကောင်းပါတယ်",
+        "question2": "ပျင်းဖို့ကောင်းတယ်"
+    },
+    {
+        "answer1": {
+            "dialog": "ကျေးဇူးပါ ဒါပေမယ့်",
+            "image": "https://i.imgur.com/OWFb6q5.png"
+        },
+        "answer2": {
+            "dialog": "မငြင်းနိုင်ပါဘူး",
+            "image": "https://i.imgur.com/bLB4Gzp.png"
+        }
+    },
+    {
+        "dialog": "Reactဆိုလည်း Basicလောက်ပဲရေးနိုင်တာဆိုတော့ ကောင်းတယ်လို့ပြောဖို့ကခက်မယ်ထင်ပါတယ်",
+        "image": "https://i.imgur.com/fJvnZAH.png"
+    },
+    {
+        "dialog": "လက်ရှိမှာလည်း Junior Laravel Developerအနေနဲ့အလုပ်လုပ်နေတာ တစ်နှစ်တောင်မပြည့်သေးဘူးဆိုတော့",
+        "image": "https://i.imgur.com/bLB4Gzp.png"
+    },
+    {
+        "dialog": "ထပ်ထပ် သင်ယူပြီး ပိုလန်း ပိုမိုက်တဲ့ Codeတွေရေးနိုင်အောင် ကြိုးစားသွားမှာပါ",
+        "image": "https://i.imgur.com/fJvnZAH.png"
+    },
+    {
+        "dialog": "သီချင်းသံတိုးနေရင်တော့ Mouse Wheelနဲ့ချဲ့လို့ရပါတယ်နော်",
+        "image": "https://i.imgur.com/fJvnZAH.png"
+    },
+    "done"
+]
