@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Phone, DownArrow, Friend,More }  from "./icons";
 import { PhoneDialog,MailDialog,MoreDialog } from './dialog';
 import React, { useState } from 'react';

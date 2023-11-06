@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export default function Photos() {
   return (
     <div className="w-full shadow-fb bg-white rounded-lg p-4">

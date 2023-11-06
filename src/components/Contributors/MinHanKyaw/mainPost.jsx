@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { More,Like,CommentButton }  from "./icons";
 
 export default function MainPost() {
