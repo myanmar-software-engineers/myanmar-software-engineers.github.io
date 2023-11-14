@@ -8,29 +8,29 @@ import SpacingDivider from "@/components/Common/SpacingDivider/SpacingDivider";
 import ProfileCardList from "@/components/Profile/ProfileCardList/ProfileCardList";
 
 export const metadata: Metadata = {
-  title: `Profile List | ${APP_CONFIG.title}`,
-  description: APP_CONFIG.description,
-  openGraph: {
-    title: `Profile List | ${APP_CONFIG.title}`,
-    description: APP_CONFIG.description,
-    images: "https://mmswe.com/images/landing/galaxy.jpg",
-  },
+	title: `Profile List | ${APP_CONFIG.title}`,
+	description: APP_CONFIG.description,
+	openGraph: {
+		title: `Profile List | ${APP_CONFIG.title}`,
+		description: APP_CONFIG.description,
+		images: "https://mmswe.com/images/landing/galaxy.jpg",
+	},
 };
 
 const getAllProfileList = async () => {
-  return allProfiles;
+	return allProfiles;
 };
 
 const ProfileListPage = async () => {
-  const profiles = await getAllProfileList();
+	const profiles = await getAllProfileList();
 
-  return (
-    <PageTransitionWrapper>
-      <Container>
-        <ProfileCardList profiles={profiles} />
-        <SpacingDivider size="lg" />
-      </Container>
-    </PageTransitionWrapper>
-  );
+	return (
+		<PageTransitionWrapper>
+			<Container>
+				<ProfileCardList profiles={profiles} />
+				<SpacingDivider size="lg" />
+			</Container>
+		</PageTransitionWrapper>
+	);
 };
 export default ProfileListPage;
