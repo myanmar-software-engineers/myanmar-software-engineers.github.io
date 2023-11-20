@@ -35,7 +35,7 @@
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.488",
     "clsx": "^2.0.0",
-    "commitlint": "^17.7.2",
+    "commitlint": "^18.4.2",
     "commitlint-config-gitmoji": "^2.3.1",
     "contentlayer": "^0.3.4",
     "cz-customizable": "^7.0.0",
