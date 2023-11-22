@@ -3,21 +3,14 @@ import React from 'react';
 const Jiro = () => {
 
 
-    const [styleX,setStyleX] = useState({
-        color: '#e02514',
-        cursor:'pointer',
-        fontWeight:'bolder'
-      });
+
     
-      const firstStyle={
+      const styleX={
         
             color: '#e02514',
             cursor:'pointer',
             fontWeight:'bolder'
          
-      }
-      const secStyle={
-        color:'white'
       }
 
   const handleClick = () => {
@@ -25,7 +18,7 @@ const Jiro = () => {
   };
 
   return (
-      <p>Son, <span onMouseEnter={setStyleX(secStyle)} onMouseLeave={setStyleX(firstStyle)} onClick={handleClick} style={styleX}>Khit's boyfriend</span>, Software Developer, Coffee Addict. --</p>
+     <span> -- Son, <span onClick={handleClick} style={styleX}>boyfriend</span>, Software Developer, Coffee Addict. --</span>
   );
 };
 

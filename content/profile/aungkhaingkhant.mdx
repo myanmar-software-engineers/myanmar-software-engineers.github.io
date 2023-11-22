@@ -15,12 +15,12 @@ tags:
 import Jiro from "@/components/Contributors/Jiro/Jiro";
 
 <div className = "jiro flex flex-col content-center items-center">
-     <img src= "https://avatars.githubusercontent.com/u/55285418?v=4" className="profile"/>
+<img src= "https://avatars.githubusercontent.com/u/55285418?v=4" className="profile"/>   
      <div className = "flex flex-col content-center items-center text-center personal-detail">
           <p>Hi, I am <span className="name">Aung Khaing Khant</span></p>
-          <Jiro/>
+          <span>{<Jiro/>}</span>
      </div>
-     <div className="quote">
+     <div className="quote text-center">
           <p>I write mediocre code pretending I know what I'm doing</p> 
      </div>
      <div className="flex flex-row flex-wrap">
@@ -34,28 +34,35 @@ import Jiro from "@/components/Contributors/Jiro/Jiro";
           </div>
      </div>
      <div className="detail flex flex-row flex-wrap justify-center content-left items-left">
-               <div className = "about">
-               <p className="text-center about-header">A little about Me </p>
-               I started coding since I was a teen, and it's the only thing I've been passionate about.
-               I have a bachelor's degree in Engineering, specializing in Computer Science. Very active on social media, especially Facebook.
-               I talk about Tech(sometimes), Music (I love both classical and pop.) and My Girlfriend (she's so fricking cute, man.).
-               At my current job, I am developing and maintaining RESTful APIs in Java using the Spring Framework, 
-               consuming their data from Angular front-end applications.
-               As a senior developer, I also take part in system design decisions and stakeholder management.
-               I did some freelance work back in the day, and I'm open for commission today.
-               Projects I am currently responsible for include:
+          <div className = "about">
+               <div className="detail-para-outer">
+                    <div className = "window-header">
+                         A little about me
+                    </div>
+                    <p className="detail-para">
+                         <span className="terminal-shell">jiro@mm-swe.com</span>:~$ cat ./aboutme.txt <br/>
+                         I started coding since I was a teen, and it's the only thing I've been passionate about.
+                         I have a bachelor's degree in Engineering, specializing in Computer Science. Very active on social media, especially Facebook.
+                         I talk about Tech (sometimes), Music (I love both classical and pop) and my girlfriend (she's so fricking cute, man).
+                         At my current job, I am developing and maintaining RESTful APIs in Java using the Spring Framework, 
+                         consuming their data from Angular front-end applications.
+                         As a senior developer, I also take part in system design decisions and stakeholder management.
+                         I did some freelance work back in the day, and I'm open for commission today.
+                    </p>
                </div>
-               <div className="flex flex-col justify-left content-center gap-2">
-                    <div className = "card">
-                         e-Library System
-                    </div>
-                    <div className = "card">
-                         e-Payment Integration (Visa, Master, MPU, e-Money)
-                    </div>
-                    <div className = "card">     
-                         News & Media Portal implementing Liferay CMS
-                    </div>
+          </div>
+          <div className="flex flex-col justify-left content-center gap-2">
+          Projects I am currently responsible for include:
+               <div className = "card">
+                    e-Library System
                </div>
+               <div className = "card">
+                    e-Payment Integration (Visa, Master, MPU, e-Money)
+               </div>
+               <div className = "card">     
+                    News & Media Portal implementing Liferay CMS
+               </div>
+          </div>
      </div>
      <div className = "info familiar text-center">
          <h4>I am familiar with</h4>
@@ -83,6 +90,9 @@ import Jiro from "@/components/Contributors/Jiro/Jiro";
               <p> Natural Languages </p>
               <p> Music </p>
           </div>
+     </div>
+     <div className = " text-center">
+          I am currently learning ReactJS in my free time.
      </div>
 
      <div className = "flex flex-row content-center">
