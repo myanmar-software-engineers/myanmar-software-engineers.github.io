@@ -1,19 +1,224 @@
-.profile{
-    border-radius: 50%;
-    height:200px;
-    width:200px;
-}
+.jiro{
 
-.desc{
-    color:#31cd31;
-    border-radius: 40px;
-    border-bottom:5px solid rgb(115, 151, 171);
+    font-family: 'Cascadia Code', sans-serif;
+    border:5px #14b8a7 solid;
+    border-radius: 20px;
     padding:20px;
-    margin-top:20px;
+    .profile{
+        border-radius: 50%;
+        height:200px;
+        width:200px;
+        animation: profile-slide 2.5s linear infinite alternate;
+    }
+    .close{
+        
+        position:absolute;
+        width:50px;
+        right:0;
+        color:red;
+    }
+ 
+      @keyframes quoteshadow {
+        0% {
+            color: white;
+        }
+        50%{
+            color:  #14b8a7;
+    
+        }
+    
+        100%{
+            color: white;
+        }
+      }
+
+    .desc{
+        border-radius: 10px;
+        background-color: #156a62;
+        margin:20px;
+        width:300px;
+        animation: bounce 0.75s linear infinite alternate;
+    }
+    .about-header{
+        font-weight:bolder;
+        text-decoration: underline;
+        font-size: 16pt;
+    }
+    .personal-header{
+        font-size:20px;
+        font-weight:bolder;
+    }
+    .detail ,.info{
+        @media screen and (min-width: 1024px) {
+            /* Styles for desktop */
+            width:60%;
+          }
+          
+          @media screen and (min-width: 768px) and (max-width: 1023px) {
+            /* Styles for tablet */
+            width:100%;
+          }
+          
+          @media screen and (max-width: 767px) {
+            /* Styles for mobile */
+            width:100%;
+          }
+    }
+
+
+    .info{
+        padding-bottom:20px;
+        margin-bottom:20px;
+        border-radius: 10px;
+        background-color: #076057;
+        border:2px white solid;
+    }
+    .familiar{
+        background-color: #0b5f56!important;
+    }
+    .icon{
+        height:50px;
+        width:50px;
+        margin:10px 10px;
+    }
+    .card{
+        border:3px solid white;
+        border-radius:10px;
+        padding:5px;
+        height:75px;
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: left;
+    }
+    h4{
+        text-align: center;
+        background-color: #14b8a7;
+        width: 100%;
+        padding:10px;
+        margin:0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        font-weight: bolder;
+    }
+    
+    .desc p{
+        margin:20px;
+    }
+
+    .info p:hover{
+        animation: bounce-up 0.4s forwards;
+    }
+    
+    .personal-detail{
+        margin-top: 20px;
+    }
+    .badge-container{
+        padding:20px;
+        padding-bottom:0px;
+    }
+    .quote {
+        font-weight: bolder;
+        padding:20px;
+        margin:10px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        animation-name: quoteshadow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    .name{
+        font-size: 20px;
+        font-weight:900;
+        color:#14b8a7
+    }
+    .detail{
+        margin:20px;
+    }
+    .detail-para{
+        height:200px;
+        overflow: auto;
+        text-align: justify;
+        padding:20px;
+        padding-top:10px;
+        background-color: black;
+    }
+
+    .detail-para-outer{
+        overflow: hidden;
+        border:2px solid white;
+        border-radius:20px;
+        box-shadow: 4px 4px rgb(36, 17, 123);
+        margin-top:10px;
+    }
+    .badge-container > p{
+        
+        padding:5px 10px;
+        border:0.5px solid white;
+        border-radius:5px;
+    }
+    .terminal-shell{
+        color:rgb(0, 255, 0)!important;
+
+    }
+
+    .window-header{
+        background-color: #14b8a7;
+        font-weight: bolder;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        height:30px;
+        padding:4px;
+        text-align: center;
+        padding-left:10px;
+        width: 100%;
+    }
+
+    .badge-container > p:hover{
+        background-color: white;
+        color:rgb(44, 44, 139);
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .about{
+        margin-bottom:20px;
+    }
+    .j-footer{
+        position:absolute;
+        bottom:0;
+        width:100%;
+    }
+
+
+
+    @keyframes profile-slide {
+        0% {
+            transform: translateX(-70px);
+        }
+        100% {
+            transform: translateX(70px); /* Adjust the distance as needed */
+        }
+    }
+
+    @keyframes bounce {
+        0%{
+            transform: translateY(20px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
+    @keyframes bounce-up {
+        0%{
+            transform: translateY(0px);
+        }
+        100%{
+            transform: translateY(-2px);
+        }
+    }
 }
 
-.icon{
-    height:30px;
-    width:30px;
-    margin:10px 10px;
-}
