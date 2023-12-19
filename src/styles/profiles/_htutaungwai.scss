@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Inconsolata:wght@500;700;800&display=swap");
+
+.monospace {
+  font-family: monospace;
+}
+
+@mixin scrollbars(
+  $size,
+  $foreground-color: transparent,
+  $background-color: transparent
+) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+.custom-area {
+  @include scrollbars(0.5em, slategray);
+  scroll-behavior: smooth;
+}
