@@ -30,7 +30,7 @@
     "@react-three/drei": "^9.88.7",
     "@react-three/fiber": "^8.15.8",
     "@react-three/postprocessing": "^2.15.8",
-    "@types/three": "^0.158.0",
+    "@types/three": "^0.160.0",
     "@formkit/auto-animate": "^0.8.0",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.488",
