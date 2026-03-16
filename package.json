@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@floating-ui/react": "^0.27.19",
-    "@formkit/auto-animate": "^0.8.0",
+    "@formkit/auto-animate": "^0.9.0",
     "@lexical/clipboard": "^0.41.0",
     "@lexical/code": "^0.41.0",
     "@lexical/html": "^0.41.0",
