@@ -93,7 +93,7 @@ function JobPostInner() {
             <FileText className="w-7 h-7 text-zinc-500" />
           </div>
           <h2 className="font-display text-2xl font-bold text-white mb-2">
-            Job not found
+            {t("noJobFound")}
           </h2>
           <p className="text-sm text-zinc-500 mb-6">
             This job post may have been removed or is no longer available.
@@ -169,7 +169,7 @@ function JobPostInner() {
             className="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-200 transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span className="font-mono text-xs uppercase tracking-wider">Jobs</span>
+            <span className="font-mono text-xs uppercase tracking-wider">{t("allJobs")}</span>
           </MseLink>
 
           <button
@@ -178,7 +178,7 @@ function JobPostInner() {
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-mono uppercase tracking-wider text-zinc-500 hover:text-zinc-200 bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.1] transition-all duration-200"
           >
             <Share2 className="w-3 h-3" />
-            Share
+            {t("share")}
           </button>
         </motion.div>
 
@@ -257,7 +257,7 @@ function JobPostInner() {
                   )}
                 >
                   {isExpired ? <AlertTriangle className="w-3.5 h-3.5" /> : <CalendarClock className="w-3.5 h-3.5" />}
-                  {isExpired ? "Expired" : "Expires"}{" "}
+                  {isExpired ? t("expired") : t("expires")}{" "}
                   {post.expiredAt.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
                 </span>
               );
@@ -290,7 +290,7 @@ function JobPostInner() {
             </div>
             <div>
               <p className="text-sm font-medium text-zinc-200">{post.authorName}</p>
-              <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-wider">Posted by</p>
+              <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-wider">{t("postedBy")}</p>
             </div>
           </div>
         </motion.div>
@@ -421,7 +421,7 @@ function JobPostInner() {
               className="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-200 transition-colors duration-200"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span className="font-mono text-xs uppercase tracking-wider">All jobs</span>
+              <span className="font-mono text-xs uppercase tracking-wider">{t("allJobs")}</span>
             </MseLink>
 
             <button
@@ -430,7 +430,7 @@ function JobPostInner() {
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-mono uppercase tracking-wider text-zinc-500 hover:text-zinc-200 bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.1] transition-all duration-200"
             >
               <Share2 className="w-3 h-3" />
-              Share
+              {t("share")}
             </button>
           </div>
         </motion.div>

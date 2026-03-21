@@ -233,7 +233,7 @@ const JobCard = ({
                   >
                     <CalendarClock className="w-2.5 h-2.5" />
                     {job.expiredAt.getTime() < Date.now()
-                      ? "Expired"
+                    ? t("expired")
                       : job.expiredAt.toLocaleDateString("en-US", { month: "short", day: "numeric" })}
                   </span>
                 </>
