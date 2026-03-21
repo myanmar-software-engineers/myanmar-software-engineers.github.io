@@ -260,7 +260,15 @@
     "loadMore": "Load more",
     "loading": "Loading...",
     "disclaimerLabel": "Disclaimer:",
-    "disclaimerText": "This job post is community-submitted and has not been fully verified. Please visit the company's official website and verify the provided information before applying."
+    "disclaimerText": "This job post is community-submitted and has not been fully verified. Please visit the company's official website and verify the provided information before applying.",
+    "tagOptions": {
+      "fullTime": "Full-time",
+      "partTime": "Part-time",
+      "remote": "Remote",
+      "contract": "Contract",
+      "freelance": "Freelance",
+      "internship": "Internship"
+    }
   },
   "auth": {
     "signIn": "Sign In",

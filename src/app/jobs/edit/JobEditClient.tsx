@@ -16,6 +16,7 @@ import { publishJobPost, unpublishJobPost } from "@/lib/firebase/firestore-jobs"
 import { useTranslations } from "next-intl";
 import { useLanguage } from "@/hooks/useLanguage";
 import { khitHaungg } from "@/fonts/fonts";
+import JobTypeSelect from "@/components/Ui/JobTypeSelect/JobTypeSelect";
 
 const INPUT_CLASS = cn(
   "w-full px-4 py-3 rounded-xl text-sm",
@@ -223,13 +224,7 @@ function JobEditForm({ postId }: { postId: string }) {
               <Tag className="w-3 h-3 inline mr-1" />
               {t("formTag")}
             </label>
-            <input
-              type="text"
-              value={tag}
-              onChange={(e) => setTag(e.target.value)}
-              placeholder={t("formTagPlaceholder")}
-              className={INPUT_CLASS}
-            />
+            <JobTypeSelect value={tag} onChange={setTag} />
           </div>
 
           {/* Skills */}

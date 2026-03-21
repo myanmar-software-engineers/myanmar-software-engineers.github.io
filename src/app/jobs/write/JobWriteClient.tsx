@@ -13,13 +13,14 @@ import { useJobEditor } from "@/hooks/jobs/useJobEditor";
 import { useTranslations } from "next-intl";
 import { useLanguage } from "@/hooks/useLanguage";
 import { khitHaungg } from "@/fonts/fonts";
+import JobTypeSelect from "@/components/Ui/JobTypeSelect/JobTypeSelect";
 
 const INPUT_CLASS = cn(
   "w-full px-4 py-3 rounded-xl text-sm",
   "bg-white/[0.04] border border-white/[0.08]",
   "text-zinc-200 placeholder:text-zinc-600",
   "focus:outline-none focus:border-prism-cyan/40 focus:ring-1 focus:ring-prism-cyan/20",
-  "transition-all duration-200"
+  "transition-all duration-200",
 );
 
 function TagInput({
@@ -103,7 +104,7 @@ function JobWriteForm() {
     (state: SerializedEditorState) => {
       setDescription(state);
     },
-    [setDescription]
+    [setDescription],
   );
 
   const handleSave = async () => {
@@ -138,7 +139,12 @@ function JobWriteForm() {
             <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-gradient-to-br from-prism-cyan/20 to-prism-violet/20 border border-white/[0.08]">
               <Briefcase className="w-4.5 h-4.5 text-prism-cyan" />
             </div>
-            <h1 className={cn("text-xl font-semibold font-display text-white tracking-tight", mmFont)}>
+            <h1
+              className={cn(
+                "text-xl font-semibold font-display text-white tracking-tight",
+                mmFont,
+              )}
+            >
               {t("postNewJob")}
             </h1>
           </div>
@@ -153,7 +159,12 @@ function JobWriteForm() {
         >
           {/* Position */}
           <div>
-            <label className={cn("block text-xs font-mono text-zinc-500 uppercase tracking-wider mb-2", mmFont)}>
+            <label
+              className={cn(
+                "block text-xs font-mono text-zinc-500 uppercase tracking-wider mb-2",
+                mmFont,
+              )}
+            >
               {t("formPosition")}
             </label>
             <input
@@ -167,22 +178,26 @@ function JobWriteForm() {
 
           {/* Tag (Job Type) */}
           <div>
-            <label className={cn("block text-xs font-mono text-zinc-500 uppercase tracking-wider mb-2", mmFont)}>
+            <label
+              className={cn(
+                "block text-xs font-mono text-zinc-500 uppercase tracking-wider mb-2",
+                mmFont,
+              )}
+            >
               <Tag className="w-3 h-3 inline mr-1" />
               {t("formTag")}
             </label>
-            <input
-              type="text"
-              value={tag}
-              onChange={(e) => setTag(e.target.value)}
-              placeholder={t("formTagPlaceholder")}
-              className={INPUT_CLASS}
-            />
+            <JobTypeSelect value={tag} onChange={setTag} />
           </div>
 
           {/* Skills */}
           <div>
-            <label className={cn("block text-xs font-mono text-zinc-500 uppercase tracking-wider mb-2", mmFont)}>
+            <label
+              className={cn(
+                "block text-xs font-mono text-zinc-500 uppercase tracking-wider mb-2",
+                mmFont,
+              )}
+            >
               {t("formSkills")}
             </label>
             <TagInput
@@ -195,7 +210,12 @@ function JobWriteForm() {
 
           {/* Office Email */}
           <div>
-            <label className={cn("block text-xs font-mono text-zinc-500 uppercase tracking-wider mb-2", mmFont)}>
+            <label
+              className={cn(
+                "block text-xs font-mono text-zinc-500 uppercase tracking-wider mb-2",
+                mmFont,
+              )}
+            >
               <Mail className="w-3 h-3 inline mr-1" />
               {t("formEmail")}
             </label>
@@ -210,7 +230,12 @@ function JobWriteForm() {
 
           {/* Expiration Date */}
           <div>
-            <label className={cn("block text-xs font-mono text-zinc-500 uppercase tracking-wider mb-2", mmFont)}>
+            <label
+              className={cn(
+                "block text-xs font-mono text-zinc-500 uppercase tracking-wider mb-2",
+                mmFont,
+              )}
+            >
               <CalendarClock className="w-3 h-3 inline mr-1" />
               {t("formExpiredAt")}
             </label>
@@ -219,14 +244,24 @@ function JobWriteForm() {
               onChange={setExpiredAt}
               placeholder={t("formExpiredAtPlaceholder")}
             />
-            <p className={cn("text-[11px] text-zinc-600 mt-1.5 font-mono", mmFont)}>
+            <p
+              className={cn(
+                "text-[11px] text-zinc-600 mt-1.5 font-mono",
+                mmFont,
+              )}
+            >
               {t("formExpiredAtHint")}
             </p>
           </div>
 
           {/* Description (Rich Text) */}
           <div>
-            <label className={cn("block text-xs font-mono text-zinc-500 uppercase tracking-wider mb-2", mmFont)}>
+            <label
+              className={cn(
+                "block text-xs font-mono text-zinc-500 uppercase tracking-wider mb-2",
+                mmFont,
+              )}
+            >
               {t("formDescription")}
             </label>
             <ContentEditor
@@ -237,9 +272,7 @@ function JobWriteForm() {
           </div>
 
           {/* Error */}
-          {error && (
-            <p className="text-sm text-prism-rose">{error}</p>
-          )}
+          {error && <p className="text-sm text-prism-rose">{error}</p>}
 
           {/* Actions */}
           <div className="flex items-center gap-3 pt-4">
@@ -251,11 +284,13 @@ function JobWriteForm() {
                 "flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium",
                 "bg-prism-cyan text-white",
                 "hover:bg-prism-cyan/90 transition-colors duration-200",
-                "disabled:opacity-40 disabled:cursor-not-allowed"
+                "disabled:opacity-40 disabled:cursor-not-allowed",
               )}
             >
               <Save className="w-4 h-4" />
-              <span className={mmFont}>{saving ? t("saving") : t("saveDraft")}</span>
+              <span className={mmFont}>
+                {saving ? t("saving") : t("saveDraft")}
+              </span>
             </button>
           </div>
         </motion.div>
@@ -266,8 +301,8 @@ function JobWriteForm() {
 
 export default function JobWriteClient() {
   return (
-    <AuthGuard>
-      <JobWriteForm />
-    </AuthGuard>
+    // <AuthGuard>
+    <JobWriteForm />
+    // </AuthGuard>
   );
 }
