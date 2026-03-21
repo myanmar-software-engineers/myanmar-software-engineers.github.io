@@ -365,6 +365,16 @@ const Footer = () => {
               >
                 {t("contactUs")}
               </FooterLink>
+
+              <FooterLink
+                href="/jobs"
+                color="#fbbf24"
+                index={4}
+                isInView={isInView}
+                mmFont={mmFont}
+              >
+                {t("jobs")}
+              </FooterLink>
             </nav>
           </div>
 
