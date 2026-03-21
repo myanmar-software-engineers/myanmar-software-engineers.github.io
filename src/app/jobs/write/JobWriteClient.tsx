@@ -301,8 +301,8 @@ function JobWriteForm() {
 
 export default function JobWriteClient() {
   return (
-    // <AuthGuard>
-    <JobWriteForm />
-    // </AuthGuard>
+    <AuthGuard>
+      <JobWriteForm />
+    </AuthGuard>
   );
 }
