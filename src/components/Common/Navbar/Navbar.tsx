@@ -23,6 +23,17 @@ const linkKeys = [
   { key: "jobs", href: "/jobs" },
 ] as const;
 
+const desktopNavWidthByKey: Record<(typeof linkKeys)[number]["key"], string> = {
+  home: "w-[7rem]",
+  profiles: "w-[6rem]",
+  editor: "w-[5.5rem]",
+  howTo: "w-[5.25rem]",
+  blog: "w-[4.5rem]",
+  jobs: "w-[5rem]",
+};
+
+const sparkleDriftX = [-10, 8, 14] as const;
+
 /* ── Prismatic shimmer line along the navbar bottom ── */
 const PrismBorder = () => (
   <div className="absolute bottom-0 left-0 right-0 h-[1px] overflow-hidden">
@@ -39,7 +50,7 @@ const PrismBorder = () => (
 );
 
 /* ── Floating sparkle particles near active indicator ── */
-const Sparkle = ({ delay }: { delay: number }) => (
+const Sparkle = ({ delay, driftX }: { delay: number; driftX: number }) => (
   <motion.div
     className="absolute rounded-full"
     style={{
@@ -52,7 +63,7 @@ const Sparkle = ({ delay }: { delay: number }) => (
     animate={{
       opacity: [0, 1, 0],
       y: [0, -18, -28],
-      x: [0, (Math.random() - 0.5) * 20],
+      x: [0, driftX],
       scale: [0, 1.2, 0],
     }}
     transition={{
@@ -92,7 +103,7 @@ const ActiveIndicator = () => (
     {/* Sparkle particles */}
     <div className="absolute top-0">
       {[0, 0.6, 1.2].map((d, i) => (
-        <Sparkle key={i} delay={d} />
+        <Sparkle key={i} delay={d} driftX={sparkleDriftX[i]} />
       ))}
     </div>
   </motion.div>
@@ -104,12 +115,14 @@ const NavLink = ({
   label,
   isActive,
   index,
+  widthClass,
   mmFont = "",
 }: {
   href: string;
   label: string;
   isActive: boolean;
   index: number;
+  widthClass: string;
   mmFont?: string;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -162,10 +175,11 @@ const NavLink = ({
       <MseLink
         href={href}
         className={cn(
-          "relative font-display text-[13px] font-bold uppercase tracking-[0.15em] py-2 px-1 transition-colors duration-300",
+          "relative inline-flex items-center justify-center whitespace-nowrap font-display text-[14px] font-bold uppercase tracking-[0.12em] py-2 px-1 transition-colors duration-300",
           isActive
             ? "text-white"
             : "text-zinc-500 hover:text-zinc-200",
+          widthClass,
           mmFont
         )}
       >
@@ -350,7 +364,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex flex-row items-center">
             {/* Primary nav links */}
-            <div className="flex items-center gap-5 xl:gap-8">
+            <div className="flex items-center gap-2 xl:gap-2.5">
               {linkKeys.map((link, i) => (
                 <NavLink
                   key={link.key}
@@ -358,13 +372,14 @@ const Navbar = () => {
                   label={t(link.key)}
                   isActive={path === link.href}
                   index={i}
+                  widthClass={desktopNavWidthByKey[link.key]}
                   mmFont={mmFont}
                 />
               ))}
             </div>
 
             {/* Prismatic divider */}
-            <div className="mx-4 xl:mx-5 h-4 w-px bg-gradient-to-b from-transparent via-white/[0.08] to-transparent" />
+            <div className="mx-2 xl:mx-2.5 h-4 w-px bg-gradient-to-b from-transparent via-white/[0.08] to-transparent" />
 
             {/* Utility group */}
             <div className="flex items-center gap-3">

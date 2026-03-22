@@ -18,7 +18,7 @@ export default function SignInButton({ className }: { className?: string }) {
       type="button"
       onClick={signInWithGoogle}
       className={cn(
-        "group relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider overflow-hidden",
+        "group relative inline-flex min-w-[7.5rem] items-center justify-center gap-1.5 whitespace-nowrap px-3.5 py-1.75 rounded-full text-sm font-bold uppercase tracking-wider overflow-hidden",
         "text-zinc-300 hover:text-white transition-all duration-300",
         className
       )}
