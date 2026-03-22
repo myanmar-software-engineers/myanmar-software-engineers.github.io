@@ -9,7 +9,6 @@ import {
   ArrowLeft,
   Tag,
   Briefcase,
-  Share2,
   FileText,
   Mail,
   CalendarClock,
@@ -23,6 +22,58 @@ import type { JobPost } from "@/lib/firebase/types";
 import { useTranslations } from "next-intl";
 import { useLanguage } from "@/hooks/useLanguage";
 import { khitHaungg } from "@/fonts/fonts";
+import {
+  FaFacebookF,
+  FaXTwitter,
+  FaLinkedinIn,
+  FaTelegram,
+} from "react-icons/fa6";
+import type { IconType } from "react-icons";
+
+type SharePlatform = "facebook" | "twitter" | "linkedin" | "telegram";
+
+function ShareActions({
+  shareLabel,
+  onShare,
+}: {
+  shareLabel: string;
+  onShare: (platform: SharePlatform) => void;
+}) {
+  const platforms: Array<{
+    platform: SharePlatform;
+    label: string;
+    icon: IconType;
+  }> = [
+    { platform: "facebook", label: "Facebook", icon: FaFacebookF },
+    { platform: "twitter", label: "Twitter/X", icon: FaXTwitter },
+    { platform: "linkedin", label: "LinkedIn", icon: FaLinkedinIn },
+    { platform: "telegram", label: "Telegram", icon: FaTelegram },
+  ];
+
+  const buttonClassName =
+    "w-8 h-8 sm:w-auto sm:h-auto sm:px-2.5 sm:py-1.5 rounded-lg text-[10px] font-mono uppercase tracking-wider text-zinc-500 hover:text-zinc-200 bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.1] transition-all duration-200 flex items-center justify-center";
+
+  return (
+    <div className="flex items-center gap-2 sm:gap-2.5">
+      <span className="hidden sm:inline text-[10px] font-mono uppercase tracking-wider text-zinc-600 mr-1.5">{shareLabel}</span>
+      {platforms.map(({ platform, label, icon: Icon }) => (
+        <button
+          key={platform}
+          type="button"
+          onClick={() => onShare(platform)}
+          className={buttonClassName}
+          aria-label={`Share this job on ${label}`}
+          title={`Share this job on ${label}`}
+        >
+          <span aria-hidden="true" className="sm:hidden text-[12px]">
+            <Icon />
+          </span>
+          <span className="hidden sm:inline">{label}</span>
+        </button>
+      ))}
+    </div>
+  );
+}
 
 function JobPostInner() {
   const searchParams = useSearchParams();
@@ -136,12 +187,23 @@ function JobPostInner() {
         year: "numeric",
       });
 
-  const handleShare = async () => {
-    if (navigator.share) {
-      await navigator.share({ title: post.position, url: window.location.href });
-    } else {
-      await navigator.clipboard.writeText(window.location.href);
-    }
+  const getShareLinks = () => {
+    const url = window.location.href;
+    const text = `Check out this job: ${post.position}`;
+    const encodedUrl = encodeURIComponent(url);
+    const encodedText = encodeURIComponent(text);
+
+    return {
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+      twitter: `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
+      linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+      telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`,
+    };
+  };
+
+  const openShare = (platform: SharePlatform) => {
+    const links = getShareLinks();
+    window.open(links[platform], "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -172,14 +234,7 @@ function JobPostInner() {
             <span className="font-mono text-xs uppercase tracking-wider">{t("allJobs")}</span>
           </MseLink>
 
-          <button
-            type="button"
-            onClick={handleShare}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-mono uppercase tracking-wider text-zinc-500 hover:text-zinc-200 bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.1] transition-all duration-200"
-          >
-            <Share2 className="w-3 h-3" />
-            {t("share")}
-          </button>
+          <ShareActions shareLabel={t("share")} onShare={openShare} />
         </motion.div>
 
         {/* Header card */}
@@ -424,14 +479,7 @@ function JobPostInner() {
               <span className="font-mono text-xs uppercase tracking-wider">{t("allJobs")}</span>
             </MseLink>
 
-            <button
-              type="button"
-              onClick={handleShare}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-mono uppercase tracking-wider text-zinc-500 hover:text-zinc-200 bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.1] transition-all duration-200"
-            >
-              <Share2 className="w-3 h-3" />
-              {t("share")}
-            </button>
+            <ShareActions shareLabel={t("share")} onShare={openShare} />
           </div>
         </motion.div>
       </article>
