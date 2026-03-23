@@ -54,7 +54,7 @@
     "fast-shuffle": "^6.0.1",
     "firebase": "^12.10.0",
     "husky": "^8.0.3",
-    "lexical": "^0.41.0",
+    "lexical": "^0.42.0",
     "lint-staged": "^15.0.2",
     "lucide-react": "^0.577.0",
     "motion": "^12.37.0",
