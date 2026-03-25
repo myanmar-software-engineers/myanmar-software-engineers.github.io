@@ -13,10 +13,81 @@ tags:
   - Tailwindcss
 ---
 
-##### A web developer who focused on modern frontend ecosystems and creating seamless user journeys.
+import { FaGithub } from "react-icons/fa6";
+import { CiLinkedin } from "react-icons/ci";
+import { FaDiscord } from "react-icons/fa";
+import { Braces, Blocks, MonitorSmartphone, Radar } from "lucide-react";
 
-> Always learning, always building. `🍴🍋‍🟩❔✅`
 
-**_React & Next.js enthusiast | Crafting responsive, user-centric websites._**
+<section id="about" className={`py-10 px-6  transition-colors duration-500`}>
+            <div className="max-w-7xl mx-auto px-6 py-4">
+                <div className="">
+                    <div className="grid md:grid-cols-2 gap-6 items-center">
+                        <div className="flex flex-col gap-6">
+                            <div
+                                className={`w-60 h-60 mx-auto relative  transition-all duration-1000 delay-200`}
+                            >
 
-Connect with me | gmail => [shinhlaing.htp@gmail.com](mailto:shinhlaing.htp@gmail.com) | discord => [shinnhlaing](https://discord.com/users/757793285237506058)
+                                <img
+                                    src="https://avatars.githubusercontent.com/u/88526467?v=4"
+                                    alt="Profile Photo"
+                                    className="w-full h-full object-cover rounded-full"
+                                />
+                            </div>
+                            <div className={`text-md  flex flex-col gap-3 transition-all duration-1000 delay-300`}>
+                                <p className={`text-sm md:text-[16px] text-gray-600 transition-all duration-500`}>A web developer who focused on modern frontend ecosystems and creating seamless user journeys.
+                                    I specialize in Javascript, React, TypeScript, and modern CSS frameworks to build scalable, performant applications.</p>
+                                <p className={`text-sm md:text-[16px] text-gray-600 transition-all duration-500`}>
+                                  Connect with me | <a href="mailto:shinhlaing.htp@gmail.com" className="text-purple-800">shinhlaing.htp@gmail.com</a> 
+                                </p>
+                                <div className="flex space-x-4">
+                                    <a
+                                        href="https://github.com/ShinnHlaing" target="_blank" rel="noopener noreferrer"
+                                        className="text-purple-800 cursor-pointer  transition-colors"
+                                    >
+                                        <FaGithub className='text-2xl' />
+                                    </a>
+                                    <a
+                                        href="https://discord.com/users/757793285237506058" target="_blank" rel="noopener noreferrer"
+                                        className="text-purple-800 cursor-pointer transition-colors"
+                                    >
+                                        <FaDiscord className='text-2xl' />
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="text-purple-800 cursor-pointer transition-colors" target="_blank" rel="noopener noreferrer"
+                                    >
+                                        <CiLinkedin className='text-2xl' />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            
+                                <div  className={`bg-transparent text-gray-600 hover:-translate-y-2 px-3 py-5 rounded-lg shadow-sm flex flex-col md:items-start md:text-start items-center text-center gap-3 transition-all duration-300`}>
+                                    <Braces className='text-purple-800' />
+                                    <h3 className="font-semibold">Clean Code</h3>
+                                    <p className="text-sm">Writing maintainable, scalable code following best practices</p>
+                                </div>
+                                <div  className={`bg-transparent text-gray-600 hover:-translate-y-2 px-3 py-5 rounded-lg shadow-sm flex flex-col md:items-start md:text-start items-center text-center gap-3 transition-all duration-300 `}>
+                                    <Blocks className='text-purple-800' />
+                                    <h3 className="font-semibold">UI/UX Design</h3>
+                                    <p className="text-sm">Creating intuitive interfaces with attention to detail</p>
+                                </div>
+                                <div  className={`bg-transparent text-gray-600 hover:-translate-y-2 px-3 py-5 rounded-lg shadow-sm flex flex-col md:items-start md:text-start items-center text-center gap-3 transition-all duration-300 `}>
+                                    <MonitorSmartphone className='text-purple-800' />
+                                    <h3 className="font-semibold">Responsive</h3>
+                                    <p className="text-sm">Mobile-first approach ensuring great experience on all devices</p>
+                                </div>
+                                <div  className={`bg-transparent text-gray-600 hover:-translate-y-2 px-3 py-5 rounded-lg shadow-sm flex flex-col md:items-start md:text-start items-center text-center gap-3 transition-all duration-300`}>
+                                    <Radar className='text-purple-800' />
+                                    <h3 className="font-semibold">Performance</h3>
+                                    <p className="text-sm">Optimizing for fast load times and smooth interactions</p>
+                                </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
