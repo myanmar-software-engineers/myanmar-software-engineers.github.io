@@ -24,7 +24,13 @@ const config: Config = {
         display: ["var(--font-display)", "sans-serif"],
         body: ["var(--font-body)", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
-        myanmar: ["var(--font-myanmar)", "Padauk", "Noto Sans Myanmar", "sans-serif"],
+        myanmar: [
+          "var(--font-myanmar)",
+          "Padauk",
+          "Noto Sans Myanmar",
+          "sans-serif",
+        ],
+        orb: ["var(--font-orb)", "sans-serif"],
       },
       colors: {
         // Obsidian Prism palette
@@ -52,7 +58,8 @@ const config: Config = {
         infinite_shine: "infinite_shine 3s infinite",
       },
       backgroundImage: {
-        "prism-gradient": "linear-gradient(135deg, #22d3ee 0%, #a78bfa 50%, #fb7185 100%)",
+        "prism-gradient":
+          "linear-gradient(135deg, #22d3ee 0%, #a78bfa 50%, #fb7185 100%)",
         square:
           "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255,255,255, 0.06)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e\")",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

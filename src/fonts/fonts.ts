@@ -1,5 +1,17 @@
-import { Bricolage_Grotesque, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import {
+  Bricolage_Grotesque,
+  Plus_Jakarta_Sans,
+  JetBrains_Mono,
+  Orbitron,
+} from "next/font/google";
 import localFont from "next/font/local";
+
+const orbFont = Orbitron({
+  weight: ["400", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-orb",
+  display: "swap",
+});
 
 const displayFont = Bricolage_Grotesque({
   weight: ["400", "700"],
@@ -38,4 +50,4 @@ export const titleFont = displayFont;
 export const titleFontBold = displayFont;
 export const bodyFont = bodyFontBase;
 
-export { displayFont, bodyFontBase, monoFont };
+export { displayFont, bodyFontBase, monoFont, orbFont };

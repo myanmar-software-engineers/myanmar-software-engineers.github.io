@@ -1,5 +1,11 @@
 import Navbar from "@/components/Common/Navbar/Navbar";
-import { displayFont, bodyFontBase, monoFont, khitHaungg } from "@/fonts/fonts";
+import {
+  displayFont,
+  bodyFontBase,
+  monoFont,
+  khitHaungg,
+  orbFont,
+} from "@/fonts/fonts";
 import { cn } from "@/utils";
 import styles from "@/styles/styles";
 import type { Metadata } from "next";
@@ -55,8 +61,9 @@ export default async function RootLayout({
     bodyFontBase.variable,
     monoFont.variable,
     khitHaungg.variable,
+    orbFont.variable,
     styles.gradient,
-    "font-body min-h-screen text-zinc-200 scroll-smooth overflow-x-hidden"
+    "font-body min-h-screen text-zinc-200 scroll-smooth overflow-x-hidden",
   );
   return (
     <html lang={locale} data-theme="obsidian" className="overflow-x-hidden">
@@ -69,7 +76,9 @@ export default async function RootLayout({
             <AuthProvider>
               <div className="noise-overlay" />
               <Navbar />
-              <main className="min-h-[calc(100vh-142px)] pt-16">{children}</main>
+              <main className="min-h-[calc(100vh-142px)] pt-16">
+                {children}
+              </main>
               <Footer />
             </AuthProvider>
           </LanguageProvider>
