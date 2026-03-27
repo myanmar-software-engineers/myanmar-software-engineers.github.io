@@ -32,17 +32,17 @@ MMSWE is an open-source platform where Myanmar software engineers can showcase t
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| **Framework** | Next.js 16 (App Router, Static Export) |
-| **Language** | TypeScript, React 19 |
-| **Styling** | Tailwind CSS 3 + DaisyUI + Sass |
-| **Content** | Contentlayer2 with MDX |
-| **Animation** | Framer Motion, Three.js, React Three Fiber |
-| **i18n** | next-intl (Myanmar & English) |
-| **Fonts** | Bricolage Grotesque, Plus Jakarta Sans, JetBrains Mono, KhitHaungg (Myanmar) |
-| **Package Manager** | Bun |
-| **Deployment** | GitHub Pages via GitHub Actions |
+| Layer               | Technology                                                                   |
+| ------------------- | ---------------------------------------------------------------------------- |
+| **Framework**       | Next.js 16 (App Router, Static Export)                                       |
+| **Language**        | TypeScript, React 19                                                         |
+| **Styling**         | Tailwind CSS 3 + DaisyUI + Sass                                              |
+| **Content**         | Contentlayer2 with MDX                                                       |
+| **Animation**       | Framer Motion, Three.js, React Three Fiber                                   |
+| **i18n**            | next-intl (Myanmar & English)                                                |
+| **Fonts**           | Bricolage Grotesque, Plus Jakarta Sans, JetBrains Mono, KhitHaungg (Myanmar) |
+| **Package Manager** | Bun                                                                          |
+| **Deployment**      | GitHub Pages via GitHub Actions                                              |
 
 ## Quick Start
 
@@ -119,12 +119,93 @@ Hello! I'm a software engineer from Myanmar...
 
 ### Frontmatter Fields
 
-| Field | Required | Description |
-|-------|----------|-------------|
-| `name` | Yes | Your display name |
-| `description` | No | Short bio (shown on profile card) |
-| `image` | No | Avatar URL (GitHub avatar recommended) |
-| `tags` | No | Technology/skill tags |
+| Field         | Required | Description                            |
+| ------------- | -------- | -------------------------------------- |
+| `name`        | Yes      | Your display name                      |
+| `description` | No       | Short bio (shown on profile card)      |
+| `image`       | No       | Avatar URL (GitHub avatar recommended) |
+| `tags`        | No       | Technology/skill tags                  |
+
+## Add Your Book
+
+1. **Fork** this repository
+2. Create a new file in `content/books/`:
+
+```
+content/books/your-book-title.mdx
+```
+
+3. Add frontmatter and content:
+
+```mdx
+---
+title: book title
+authorName:  the name of book author
+link: https://example.com/book-link
+image: https://example.com/book-cover.jpg
+authorEmail: author@example.com
+authorLink: https://example.com
+---
+
+Short note about why this book is recommended.
+```
+
+4. **Submit a Pull Request** to the `main` branch
+
+### Frontmatter Fields
+
+| Field         | Required | Description                    |
+| ------------- | -------- | ------------------------------ |
+| `title`       | Yes      | Book title                     |
+| `authorName`  | Yes      | Author name                    |
+| `link`        | Yes      | Official/primary resource link |
+| `image`       | No       | Book cover image URL           |
+| `authorEmail` | No       | Author contact email           |
+| `authorLink`  | No       | Author website/profile URL     |
+
+## Add Your Class
+
+1. **Fork** this repository
+2. Create a new file in `content/classes/`:
+
+```
+content/classes/your-class-title.mdx
+```
+
+3. Add frontmatter and content:
+
+```mdx
+---
+title: your class title
+description: short description of your class 
+instructorName: class mentor name
+classLink: https://example.com/classes/react-bootcamp
+tags: tags for tech-stack that involve in this class
+classType: online or in-person
+status: upcoming/completed/incoming
+proofOfAssociation: Proof that submitter is affiliated with the class.
+image: https://example.com/class-cover.jpg
+---
+
+Add trust context, schedule notes, and useful details for learners.
+This is important because PR without trust context for class will be denied.
+```
+
+4. **Submit a Pull Request** to the `main` branch
+
+### Frontmatter Fields
+
+| Field                | Required | Description                               |
+| -------------------- | -------- | ----------------------------------------- |
+| `title`              | Yes      | Class title                               |
+| `description`        | Yes      | Summary of class content                  |
+| `instructorName`     | Yes      | Instructor or organization                |
+| `classLink`          | Yes      | Official class link                       |
+| `tags`               | Yes      | Topic tags (e.g. React, Python)           |
+| `classType`          | Yes      | One of: `online`, `In-Person`             |
+| `status`             | Yes      | One of: `active`, `completed`, `incoming` |
+| `proofOfAssociation` | Yes      | Credibility/proof note for maintainers    |
+| `image`              | No       | Class cover image URL                     |
 
 ## Project Structure
 
@@ -161,14 +242,14 @@ messages/
 
 MMSWE uses the **Obsidian Prism** theme — a dark interface with prismatic accent colors:
 
-| Token | Color | Usage |
-|-------|-------|-------|
-| `obsidian` | `#09090b` | Base background |
-| `surface` | `#1a1a22` | Card backgrounds |
-| `prism-cyan` | `#22d3ee` | Primary accent |
+| Token          | Color     | Usage            |
+| -------------- | --------- | ---------------- |
+| `obsidian`     | `#09090b` | Base background  |
+| `surface`      | `#1a1a22` | Card backgrounds |
+| `prism-cyan`   | `#22d3ee` | Primary accent   |
 | `prism-violet` | `#a78bfa` | Secondary accent |
-| `prism-rose` | `#fb7185` | Tertiary accent |
-| `accent-gold` | `#fbbf24` | Highlight accent |
+| `prism-rose`   | `#fb7185` | Tertiary accent  |
+| `accent-gold`  | `#fbbf24` | Highlight accent |
 
 Typography uses **Bricolage Grotesque** for display, **Plus Jakarta Sans** for body, **JetBrains Mono** for code, and **KhitHaungg** for Myanmar script.
 

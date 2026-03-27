@@ -358,6 +358,16 @@
     "title": "Profiles",
     "subtitle": "Discover {count}+ software engineers from Myanmar. Browse by technology, search by name, and connect with the community."
   },
+  "booksHero": {
+    "label": "Tech Books & Resources",
+    "title": "Books",
+    "subtitle": "Recommended tech books and learning resources shared by Myanmar software engineers."
+  },
+  "classesHero": {
+    "label": "Tech Classes & Workshops",
+    "title": "Classes",
+    "subtitle": "A trust-first, community-curated directory of tech classes in Myanmar. Listings are reviewed before publication."
+  },
   "footer": {
     "tagline": {
       "prefix": "Empowering Myanmar's Software Engineers to ",
