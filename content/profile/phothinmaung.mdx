@@ -1,0 +1,206 @@
+---
+name: Pho Thin Maung
+description: A programming enthusiast.
+image: "https://susee.phothin.dev/logo/phothin/logo-330.webp"
+tags:
+  - TypeScript
+  - JavaScript
+---
+
+{/* The projects */}
+export const projects = [
+{
+title: "Thetkarit",
+summary:
+"A dual-language (TypeScript/JavaScript and C++) library for Burmese calendar calculations and astronomical computations.",
+github: "https://github.com/phothinmg/thetkarits",
+},
+{
+title: "Susee",
+summary:
+"Susee is a simple TypeScript bundler for library packages.",
+github: "https://github.com/phothinmg/susee",
+npm: "https://www.npmjs.com/package/susee",
+},
+{
+title: "Mhaehko",
+summary:
+"A static analysis tool designed to examine TypeScript and JavaScript projects and produce dependency graphs,using TypeScript APIs.",
+github: "https://github.com/phothinmg/mhaehko",
+npm: "https://www.npmjs.com/package/mhaehko",
+},
+];
+
+{/* The Crafts */}
+export const labs = [
+{
+title:
+"Sunrise and sunset times for capitals of states and regions in Myanmar",
+url: "https://phothinmg.github.io/crafts/mm-daytime.html",
+summary: "ပြည်နယ်နှင့်တိုင်းမြို့တော်များ၏နေဝင်နေထွက်ချိန်များ",
+},
+{
+title: "Get Maharbote from Birthday",
+url: "https://phothinmg.github.io/crafts/maharbote.html",
+summary:
+"မိမိမွေးနေ့မှမဟာဘုတ်အဖွားဇာတာခွင် , သက်ရောက်ဂြိုလ် နှင့် သက်ရောက်လက်ကျန်နှစ်ကိုသိရှိနိုင်ပါသည်",
+},
+];
+
+{/* The Components */}
+
+export const ProjectCard = ({ title, summary, github, npm }) => {
+  return (
+    <div className="rounded-lg overflow-hidden shadow-lg border border-solid border-[#367236] last:mb-0">
+      <div className="p-[20px]">
+        <h4
+          className="mb-[10px] text-[#ababab] font-semibold"
+          style={{ fontSize: "clamp(1.18rem, calc(1.13rem + 0.24vw), 1.32rem)" }}
+        >
+          {title}
+        </h4>
+      </div>
+      <div className="min-h-[150px] text-left p-[20px]">
+        <p>{summary}</p>
+      </div>
+      <div className="flex items-center flex-wrap gap-[10px] p-[20px]">
+        <a
+          href={github}
+          target="_blank"
+          aria-label={title}
+          rel="noopener noreferrer"
+        >
+          <img
+            alt="GitHub Badge"
+            src="https://img.shields.io/badge/github-repo-blue?style=for-the-badge&logo=github"
+            fetchPriority="high"
+            width="120"
+            height="50"
+          />
+        </a>
+
+        {npm && (
+          <a
+            href={npm}
+            target="_blank"
+            aria-label={title}
+            rel="noopener noreferrer"
+          >
+            <img
+              alt="NPM Badge"
+              src="https://img.shields.io/badge/npm-package-red?style=for-the-badge&logo=npm"
+              fetchPriority="high"
+              width="120"
+              height="50"
+            />
+          </a>
+        )}
+      </div>
+    </div>
+
+);
+};
+
+export const DevLabCard = ({ title, url, summary }) => {
+  return (
+    <div className="p-[20px] mt-0 mr-0 ml-0 mb-[1.5em] rounded-lg overflow-hidden shadow-lg border-2 border-solid border-[#367236] last:mb-0">
+      <a
+        href={url}
+        className="no-underline cursor-pointer text-[#71b4eb] font-semibold hover:text-[#ff9800] mb-[10px]"
+        style={{ fontSize: "clamp(1.09rem, calc(1.07rem + 0.11vw), 1.15rem)" }}
+      >
+        {title}
+      </a>
+      <p
+        className="font-myanmar text-[#ababab] mt-[10px]"
+        style={{ fontSize: "clamp(0.85rem, 0.7897rem + 0.2804vw, 1rem)" }}
+      >
+        {summary}
+      </p>
+    </div>
+  );
+};
+
+{/* Mdx Body */}
+
+<div className="my-0 mx-auto py-0 px-[20px] max-w-[70rem]">
+  <div className="flex items-center gap-[50px] max-[768px]:flex-col">
+    <div className="flex-1 rounded-lg overflow-hidden shadow-md">
+      <img
+        className="block rounded-full"
+        src={"https://susee.phothin.dev/logo/phothin/logo-330.webp"}
+        srcSet="https://susee.phothin.dev/logo/phothin/logo-330.webp 330w, https://susee.phothin.dev/logo/phothin/logo-495.webp 495w, https://susee.phothin.dev/logo/phothin/logo-660.webp 660w"
+        width={"330"}
+        height={"330"}
+        fetchPriority="high"
+      />
+    </div>
+    <div className="flex-1">
+      <h3 className="text-[#ababab] font-semibold" style={{ fontSize: "clamp(1.29rem, calc(1.2rem + 0.41vw), 1.51rem)" }}>
+        Mingalarpar
+      </h3>
+      <p className='mt-[10px]'>I'm Pho Thin Maung, a programming enthusiast from Myanmar. </p>
+
+      <div className="flex items-center flex-wrap gap-[10px] mt-[10px] ">
+        <p>Reach me on : </p>
+        <a
+          href="https://github.com/phothinmg"
+          className="no-underline cursor-pointer hover:text-[#ff9800]"
+        >
+          <svg
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+          >
+            <title>GitHub</title>
+            <path
+              fill="currentColor"
+              fillOpacity="0.7"
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="mailto:phothinmg@disroot.org"
+          className="no-underline cursor-pointer hover:text-[#ff9800]"
+        >
+          <svg
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+          >
+            <title>Disroot Mail</title>
+            <path
+              fill="currentColor"
+              fillOpacity="0.7"
+              d="M3.976 2.856C2.321 3.296.603 4.491.122 5.536c-.144.315-.164.885-.04 1.133.178.35.343.384 1.387.24.817-.11 1.085-.117 1.985-.055 1.106.076 1.594.213 1.882.522.172.179 3.75 9.033 3.813 9.418.11.694-.234 1.312-1.189 2.143-.797.687-.927.907-.824 1.381.151.666.508.982 1.113.982.508 0 2.095-.268 3.297-.55 3.476-.817 6.437-1.923 8.504-3.173 1.944-1.168 3.25-2.555 3.765-3.984.15-.433.178-.618.185-1.326 0-.975-.11-1.38-.536-1.958-.858-1.16-1.8-2.005-3.338-2.988-2.96-1.902-3.778-2.294-6.67-3.215-2.521-.803-5.358-1.318-7.728-1.394-1.017-.027-1.147-.02-1.752.144zm9.411 6.526c1.477.563 2.823 1.47 4.554 3.07.838.777 1.024 1.072 1.058 1.732.076 1.23-.597 2.033-2.088 2.507-.708.22-2.191.536-2.253.474-.02-.014 0-.13.041-.254.048-.13.062-.447.048-.749-.027-.433-.096-.68-.364-1.319-.179-.433-.708-1.91-1.175-3.283l-.851-2.5.22.047c.123.028.487.151.81.275z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+<section className='py-[80px] px-[20px]'>
+    <div className='flex h-[100px] items-center justify-center'>
+      <h2 className='text-[#ababab] font-semibold' style={{fontSize:"clamp(1.4rem, calc(1.28rem + 0.61vw), 1.73rem)"}}>Projects</h2>
+    </div>
+    <div className='grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-[30px]'>
+        {projects.map((project) => (
+        <ProjectCard key={project.title} {...project} />
+        ))}
+   </div>
+</section>
+<section className='py-[80px] px-[20px]'>
+    <div className='flex h-[100px] items-center justify-center'>
+      <h2 className='text-[#ababab] font-semibold' style={{fontSize:"clamp(1.4rem, calc(1.28rem + 0.61vw), 1.73rem)"}}>Dev Lab</h2>
+    </div>
+    {labs.map((lab)=>(
+        <DevLabCard key={lab.title} {...lab} />
+    ))}
+</section>
