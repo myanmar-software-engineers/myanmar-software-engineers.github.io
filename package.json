@@ -33,7 +33,7 @@
     "@lexical/code": "^0.41.0",
     "@lexical/html": "^0.41.0",
     "@lexical/link": "^0.41.0",
-    "@lexical/list": "^0.41.0",
+    "@lexical/list": "^0.42.0",
     "@lexical/markdown": "^0.41.0",
     "@lexical/react": "^0.41.0",
     "@lexical/rich-text": "^0.41.0",
