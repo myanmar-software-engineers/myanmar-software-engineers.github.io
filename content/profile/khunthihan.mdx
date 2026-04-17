@@ -1,0 +1,351 @@
+---
+name: Khun Thi Han
+description: I'm a Final Year Computer Science Student passionate about full-stack web development and cybersecurity, building real-world applications with the MERN stack and Next.js.
+image: "https://github.com/Tomoe-12.png"
+tags:
+  - JavaScript
+  - TypeScript
+  - React.js
+  - Next.js
+  - Node.js
+  - PHP
+  - Python
+  - Java
+  - MongoDB
+  - MySQL
+  - Tailwind CSS
+---
+
+<main className="w-full font-mono">
+  <div className="border border-[#2a2a3a] bg-[#0d0d1a] rounded-2xl relative shadow-2xl overflow-hidden">
+
+    {/* Mac title bar */}
+    <div className="flex items-center gap-2 px-4 py-3 bg-[#111122] border-b border-[#2a2a3a]">
+      <span className="w-3 h-3 rounded-full bg-[#ff5f57]" style={{boxShadow:"0 0 6px #ff5f57"}}></span>
+      <span className="w-3 h-3 rounded-full bg-[#febc2e]" style={{boxShadow:"0 0 6px #febc2e"}}></span>
+      <span className="w-3 h-3 rounded-full bg-[#28c840]" style={{boxShadow:"0 0 6px #28c840"}}></span>
+      <span className="flex-1 text-center text-[11px] text-[#445566] tracking-widest select-none">
+        khun-thi-han.mdx — Portfolio
+      </span>
+    </div>
+
+    <div className="px-5 md:px-10 py-6">
+
+      {/* SECTION 1 — Hero */}
+      <div className="border-b border-[#1e2a3a] pb-8">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+
+          {/* Avatar */}
+          <div className="relative shrink-0">
+            <div className="w-[120px] h-[120px] rounded-full overflow-hidden border-2 border-[#00ffb4]"
+              style={{boxShadow:"0 0 20px rgba(0,255,180,0.3)", animation:"avatarPulse 3s ease-in-out infinite"}}>
+              <img src="https://github.com/Tomoe-12.png" className="w-full h-full object-cover" />
+            </div>
+            <span className="absolute bottom-2 right-2 w-3 h-3 rounded-full bg-[#00ffb4]"
+              style={{animation:"blinkDot 1.4s ease-in-out infinite", boxShadow:"0 0 6px #00ffb4"}}>
+            </span>
+          </div>
+
+          {/* Text */}
+          <div className="flex-1 text-center md:text-left">
+            <div className="inline-block bg-[#0e2a1e] border border-[#00ffb4] text-[#00ffb4] text-xs px-4 py-2 rounded-xl mb-4 relative"
+              style={{animation:"fadeSlideDown 0.6s ease both"}}>
+              <span className="absolute -bottom-2 left-4 w-0 h-0"
+                style={{borderLeft:"8px solid transparent", borderRight:"8px solid transparent", borderTop:"8px solid #00ffb4"}} />
+              <p>Hey there! Nice to meet you.</p>
+              <p>I build things for the web.</p>
+            </div>
+
+            <h1 className="text-2xl font-bold text-white mb-1" style={{animation:"fadeSlideUp 0.5s ease 0.1s forwards"}}>
+              Khun Thi Han
+            </h1>
+
+            <p className="text-[#556677] text-xs tracking-widest uppercase mb-3" style={{animation:"fadeSlideUp 0.5s ease 0.2s both"}}>
+              Final Year CS Student · Full-Stack Developer
+            </p>
+
+            <p className="text-[#8899aa] text-sm leading-relaxed max-w-[420px]" style={{animation:"fadeSlideUp 0.5s ease 0.3s both"}}>
+              Studying at{" "}
+              <span className="text-[#00ffb4]">University of Computer Studies, Taunggyi</span>
+              {" "}with a growing passion for{" "}
+              <span className="text-[#7b6fff]">cybersecurity</span>{" "}
+              and secure application development.
+            </p>
+          </div>
+
+          {/* GIF */}
+          <div className="shrink-0 hidden md:block">
+            <img
+              src="https://media.tenor.com/km-lY7Mlqc4AAAAj/typing-pepe-the-frog.gif"
+              className="w-[100px] h-[100px] rounded-2xl"
+              style={{filter:"drop-shadow(0 0 8px rgba(0,255,180,0.3))"}}
+            />
+          </div>
+        </div>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mt-6" style={{animation:"fadeSlideUp 0.5s ease 0.4s both"}}>
+          {["JavaScript","TypeScript","React.js","Next.js","Node.js","PHP","Python","Java","MongoDB","MySQL","Tailwind CSS"].map((tag, i) => (
+            <span key={i} className="text-[11px] px-3 py-1 rounded-full text-[#a8f0d8]"
+              style={{
+                background:"rgba(0,255,180,0.06)",
+                border:"1px solid rgba(0,255,180,0.2)",
+                animation:`tagFloat ${2 + (i % 4) * 0.3}s ease-in-out infinite`,
+                animationDelay:`${i * 0.07}s`,
+              }}>
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* SECTION 2 — Tech Stack + Skills */}
+      <div className="grid grid-cols-4 gap-6 items-start border-b border-[#1e2a3a] py-8"
+        style={{animation:"fadeSlideUp 0.6s ease 0.2s both"}}>
+
+        <div className="col-span-full md:col-span-1 flex justify-center">
+          <img
+            src="https://media.tenor.com/2sMGmDqHQKIAAAAi/computer-coding.gif"
+            className="w-full max-w-[140px] rounded-2xl"
+            style={{filter:"drop-shadow(0 0 10px rgba(123,111,255,0.4))"}}
+          />
+        </div>
+
+        <div className="col-span-full md:col-span-3 space-y-5">
+          <h2 className="font-bold text-white text-sm">🚀 Current Tech Stack</h2>
+
+          <div className="flex flex-wrap gap-4">
+            {[
+              {src:"https://raw.githubusercontent.com/github/explore/master/topics/nextjs/nextjs.png", label:"Next.js"},
+              {src:"https://raw.githubusercontent.com/github/explore/master/topics/javascript/javascript.png", label:"JS"},
+              {src:"https://raw.githubusercontent.com/github/explore/master/topics/typescript/typescript.png", label:"TS"},
+              {src:"https://raw.githubusercontent.com/github/explore/master/topics/react/react.png", label:"React"},
+              {src:"https://raw.githubusercontent.com/github/explore/master/topics/nodejs/nodejs.png", label:"Node"},
+              {src:"https://raw.githubusercontent.com/github/explore/master/topics/mongodb/mongodb.png", label:"Mongo"},
+              {src:"https://raw.githubusercontent.com/github/explore/master/topics/mysql/mysql.png", label:"MySQL"},
+            ].map((tech, i) => (
+              <div key={i} className="flex flex-col items-center gap-1">
+                <img src={tech.src} style={{width:"32px", height:"32px", borderRadius:"8px"}} />
+                <span className="text-[9px] text-[#445566]">{tech.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <h2 className="font-bold text-white text-sm pt-2">💡 Skill Proficiency</h2>
+
+          <div className="space-y-3">
+            {[
+              {name:"Next.js / React", pct:88, color:"#00ffb4"},
+              {name:"JavaScript / TypeScript", pct:85, color:"#7b6fff"},
+              {name:"Node.js / MERN Stack", pct:85, color:"#5bc8ff"},
+              {name:"PHP / MySQL", pct:82, color:"#f472b6"},
+              {name:"Python / Java", pct:50, color:"#fbbf24"},
+            ].map((s, i) => (
+              <div key={i}>
+                <div className="flex justify-between mb-1">
+                  <span className="text-[11px] text-[#7788aa]">{s.name}</span>
+                  <span className="text-[11px]" style={{color:s.color}}>{s.pct}%</span>
+                </div>
+                <div className="h-[3px] bg-[#1e2a3a] rounded-full overflow-hidden">
+                  <div style={{
+                    height:"100%", borderRadius:"999px", width:`${s.pct}%`,
+                    background:s.color,
+                    boxShadow:`0 0 6px ${s.color}80`,
+                    animation:`barGrow 1.2s ease ${i * 0.15}s both`,
+                  }} />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* SECTION 3 — Education */}
+      {/* COMMENTED OUT - Education section
+     <div className="grid grid-cols-4 gap-6 items-start border-b border-[#1e2a3a] py-8"
+        style={{animation:"fadeSlideUp 0.6s ease 0.3s both"}}>
+
+        <div className="col-span-full md:col-span-1 flex justify-center">
+          <img
+            src="https://media.tenor.com/rePDfDWO3XoAAAAi/this-is-fine.gif"
+            className="w-full max-w-[140px] rounded-2xl"
+            style={{filter:"drop-shadow(0 0 8px rgba(91,200,255,0.35))"}}
+          />
+        </div>
+
+        <div className="col-span-full md:col-span-3 space-y-3">
+          <h2 className="font-bold text-white text-sm mb-4">🎓 Education</h2>
+          {[
+            {title:"Bachelor of Computer Science (B.C.Sc)", place:"University of Computer Studies Taunggyi", period:"Jun 2022 – Present"},
+            {title:"KBZPay × Huawei Developer Bootcamp", place:"Certificate — AppCube Mini App Development", period:"Jan – Mar 2026"},
+            {title:"ACS Education Program", place:"Basic and Advanced Course", period:"Feb – Jul 2025"},
+          ].map((edu, i) => (
+            <div key={i} className="flex justify-between items-start rounded-xl p-3"
+              style={{background:"rgba(255,255,255,0.02)", border:"1px solid rgba(91,200,255,0.12)"}}>
+              <div>
+                <p className="text-[13px] font-semibold text-[#ddeeff] mb-0.5">{edu.title}</p>
+                <p className="text-[11px] text-[#445566]">{edu.place}</p>
+              </div>
+              <span className="text-[10px] text-[#5bc8ff] whitespace-nowrap ml-3 mt-0.5 px-2 py-1 rounded-full"
+                style={{background:"rgba(91,200,255,0.08)", border:"1px solid rgba(91,200,255,0.2)"}}>
+                {edu.period}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+        */}
+
+      {/* SECTION 4 — About (code block as styled div) */}
+      <div className="grid grid-cols-4 gap-6 items-start border-b border-[#1e2a3a] py-8"
+        style={{animation:"fadeSlideUp 0.6s ease 0.4s both"}}>
+
+        <div className="col-span-full md:col-span-1 flex justify-center">
+          <img
+            src="https://media.tenor.com/ongULa4VHQcAAAAj/crying-pepe-the-frog.gif"
+            className="w-full max-w-[140px] rounded-2xl"
+            style={{filter:"drop-shadow(0 0 8px rgba(196,168,248,0.35))"}}
+          />
+        </div>
+
+        <div className="col-span-full md:col-span-3">
+          <h2 className="font-bold text-white text-sm mb-4">🧑‍💻 About Me</h2>
+
+          <div className="rounded-xl overflow-hidden border border-[#2a2a3a] text-[12px]"
+            style={{background:"#0a0a14"}}>
+            <div className="flex items-center gap-2 px-3 py-2 bg-[#111122] border-b border-[#2a2a3a]">
+              <span className="w-2 h-2 rounded-full bg-[#ff5f57]"></span>
+              <span className="w-2 h-2 rounded-full bg-[#febc2e]"></span>
+              <span className="w-2 h-2 rounded-full bg-[#28c840]"></span>
+              <span className="ml-2 text-[10px] text-[#334455]">about_me.ts</span>
+            </div>
+            <div className="p-4 text-[12px] leading-relaxed overflow-x-auto" style={{fontFamily:"monospace"}}>
+              <p><span style={{color:"#7b6fff"}}>interface</span> <span style={{color:"#5bc8ff"}}>Developer</span> {"{"}</p>
+              <p>&nbsp;&nbsp;<span style={{color:"#a8f0d8"}}>name</span><span style={{color:"#00ffb4"}}>:</span> <span style={{color:"#fbbf24"}}>string</span>;</p>
+              <p>&nbsp;&nbsp;<span style={{color:"#a8f0d8"}}>location</span><span style={{color:"#00ffb4"}}>:</span> <span style={{color:"#fbbf24"}}>string</span>;</p>
+              <p>&nbsp;&nbsp;<span style={{color:"#a8f0d8"}}>stack</span><span style={{color:"#00ffb4"}}>:</span> <span style={{color:"#fbbf24"}}>string</span>[];</p>
+              <p>&nbsp;&nbsp;<span style={{color:"#a8f0d8"}}>interests</span><span style={{color:"#00ffb4"}}>:</span> <span style={{color:"#fbbf24"}}>string</span>[];</p>
+              <p>{"}"}</p>
+              <p className="mt-2"><span style={{color:"#7b6fff"}}>const</span> <span style={{color:"#00ffb4"}}>me</span><span style={{color:"#ffffff"}}>:</span> <span style={{color:"#5bc8ff"}}>Developer</span> <span style={{color:"#00ffb4"}}>=</span> {"{"}</p>
+              <p>&nbsp;&nbsp;<span style={{color:"#a8f0d8"}}>name</span><span style={{color:"#00ffb4"}}>:</span> <span style={{color:"#f472b6"}}>"Khun Thi Han"</span>,</p>
+              <p>&nbsp;&nbsp;<span style={{color:"#a8f0d8"}}>location</span><span style={{color:"#00ffb4"}}>:</span> <span style={{color:"#f472b6"}}>"Taunggyi, Myanmar"</span>,</p>
+              <p>&nbsp;&nbsp;<span style={{color:"#a8f0d8"}}>stack</span><span style={{color:"#00ffb4"}}>:</span> [<span style={{color:"#f472b6"}}>"Next.js"</span>, <span style={{color:"#f472b6"}}>"React"</span>, <span style={{color:"#f472b6"}}>"Node.js"</span>],</p>
+              <p>&nbsp;&nbsp;<span style={{color:"#a8f0d8"}}>interests</span><span style={{color:"#00ffb4"}}>:</span> [<span style={{color:"#f472b6"}}>"Cybersecurity"</span>, <span style={{color:"#f472b6"}}>"Web Dev"</span>],</p>
+              <p>{"}"}</p>
+            </div>
+          </div>
+
+          {/* Soft skills + languages */}
+          <div className="flex flex-wrap gap-6 mt-5">
+            <div>
+              <p className="text-[10px] text-[#445566] uppercase tracking-widest mb-2">Soft Skills</p>
+              <div className="flex flex-wrap gap-2">
+                {["Public Relations","Teamwork","Time Management","Communication","Critical Thinking"].map((s, i) => (
+                  <span key={i} className="text-[11px] px-3 py-1 rounded-full text-[#c4a8f8]"
+                    style={{background:"rgba(120,80,255,0.08)", border:"1px solid rgba(120,80,255,0.25)"}}>
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="text-[10px] text-[#445566] uppercase tracking-widest mb-2">Languages</p>
+              <div className="flex gap-2">
+                {[{flag:"🇬🇧", lang:"English"}, {flag:"🇲🇲", lang:"Burmese"}].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 px-3 py-1.5 rounded-xl"
+                    style={{background:"rgba(244,114,182,0.06)", border:"1px solid rgba(244,114,182,0.2)"}}>
+                    <span style={{fontSize:"16px"}}>{item.flag}</span>
+                    <span className="text-[12px] text-[#f9a8d4]">{item.lang}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* SECTION 5 — Contact */}
+      <div className="grid grid-cols-4 gap-6 items-start pt-8"
+        style={{animation:"fadeSlideUp 0.6s ease 0.5s both"}}>
+
+        <div className="col-span-full md:col-span-1 flex justify-center">
+          <img
+            src="https://media.tenor.com/2sMGmDqHQKIAAAAi/computer-coding.gif"
+            className="w-full max-w-[120px] rounded-2xl"
+            style={{filter:"drop-shadow(0 0 8px rgba(0,255,180,0.25))"}}
+          />
+        </div>
+
+        <div className="col-span-full md:col-span-3">
+          <h2 className="font-bold text-white text-sm mb-3">📡 Get in Touch</h2>
+          <p className="text-[13px] text-[#7788aa] mb-1">
+            Email:{" "}
+            <a href="mailto:khunthihan.official@gmail.com" className="text-[#00ffb4] font-semibold break-all">
+              khunthihan.official@gmail.com
+            </a>
+          </p>
+          <p className="text-[13px] text-[#7788aa] mb-1">
+            Phone:{" "}
+            <a href="tel:+959785146940" className="text-[#00ffb4] font-semibold">
+              +959-785-146-940
+            </a>
+          </p>
+          <p className="text-[13px] text-[#7788aa] mb-4">
+            Portfolio:{" "}
+            <a href="https://khunthihan.vercel.app/" className="text-[#7b6fff] font-semibold">
+              khunthihan.vercel.app
+            </a>
+          </p>
+          <div className="flex items-center gap-4 text-[13px]">
+            <a href="https://github.com/Tomoe-12/" target="_blank" className="text-[#556677] hover:text-[#00ffb4] underline">
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/khun-thi-han-b698a0382/" target="_blank" className="text-[#556677] hover:text-[#5bc8ff] underline">
+              LinkedIn
+            </a>
+            <a href="https://khunthihan.vercel.app/" target="_blank" className="text-[#556677] hover:text-[#7b6fff] underline">
+              Portfolio
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    {/* Status bar */}
+    <div className="flex items-center justify-between px-4 py-2 bg-[#0a0a14] border-t border-[#1e2a3a] text-[10px] text-[#334455]">
+      <span className="flex items-center gap-2">
+        <span style={{width:"6px", height:"6px", borderRadius:"50%", background:"#28c840", display:"inline-block", boxShadow:"0 0 4px #28c840"}} />
+        khun-thi-han.mdx
+      </span>
+      <span>UTF-8 · TypeScript JSX</span>
+      <span>⚡ Open to Work</span>
+    </div>
+  </div>
+
+  <style>{`
+    @keyframes fadeSlideDown {
+      from { opacity:0; transform:translateY(-16px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    @keyframes fadeSlideUp {
+      from { opacity:0; transform:translateY(20px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    @keyframes avatarPulse {
+      0%,100% { box-shadow:0 0 0 0 rgba(0,255,180,0.4),0 0 0 0 rgba(0,255,180,0.1); }
+      50%      { box-shadow:0 0 0 8px rgba(0,255,180,0.1),0 0 0 16px rgba(0,255,180,0.04); }
+    }
+    @keyframes blinkDot {
+      0%,100% { opacity:1; }
+      50%      { opacity:0; }
+    }
+    @keyframes tagFloat {
+      0%,100% { transform:translateY(0px); }
+      50%      { transform:translateY(-3px); }
+    }
+    @keyframes barGrow {
+      from { width:0%; }
+    }
+  `}</style>
+</main>
