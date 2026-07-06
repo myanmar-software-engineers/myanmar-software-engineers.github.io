@@ -46,7 +46,7 @@
     "@splinetool/runtime": "^1.12.69",
     "@types/three": "^0.183.1",
     "clsx": "^2.0.0",
-    "commitlint": "^17.7.2",
+    "commitlint": "^21.2.0",
     "commitlint-config-gitmoji": "^2.3.1",
     "contentlayer2": "^0.5.8",
     "cz-customizable": "^7.0.0",
