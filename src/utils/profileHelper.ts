@@ -1,4 +1,4 @@
-import { Profile } from "contentlayer/generated";
+import type { Profile } from "content-collections";
 import { shuffle } from "fast-shuffle";
 
 export const getUniqueTags = (tags: string[]) => {

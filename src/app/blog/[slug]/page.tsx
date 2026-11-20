@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { allBlogs } from "contentlayer/generated";
+import { allBlogs } from "content-collections";
 import { notFound } from "next/navigation";
 import Container from "@/components/Common/Container/Container";
 import { Mdx } from "@/components/Common/Mdx/Mdx";
@@ -34,7 +34,7 @@ const BlogDetailPage: FC<TBlogDetailPageProps> = async props => {
 
   return (
     <Container>
-      <Mdx code={blog.body.code} />
+      <Mdx code={blog.code} />
     </Container>
   );
 };

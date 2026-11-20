@@ -27,12 +27,7 @@
       "@/*": [
         "./src/*"
       ],
-      "contentlayer/generated": [
-        "./.contentlayer/generated"
-      ],
-      "contentlayer2/generated": [
-        "./.contentlayer/generated"
-      ]
+      "content-collections": ["./.content-collections/generated"]
     }
   },
   "include": [
@@ -41,7 +36,6 @@
     "**/*.tsx",
     "**/*.mdx",
     ".next/types/**/*.ts",
-    ".contentlayer/generated",
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [

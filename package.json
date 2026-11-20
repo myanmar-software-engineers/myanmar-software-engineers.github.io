@@ -10,7 +10,7 @@
     }
   ],
   "scripts": {
-    "content:build": "contentlayer2 build",
+    "content:build": "content-collections build",
     "prepare": "husky install",
     "dev": "next dev --webpack",
     "build": "next build --webpack",
@@ -27,6 +27,9 @@
     }
   },
   "dependencies": {
+    "@content-collections/core": "0.15.3",
+    "@content-collections/mdx": "0.2.2",
+    "@content-collections/next": "0.2.11",
     "@floating-ui/react": "^0.27.19",
     "@formkit/auto-animate": "^0.8.0",
     "@lexical/clipboard": "^0.41.0",
@@ -48,7 +51,6 @@
     "clsx": "^2.0.0",
     "commitlint": "^17.7.2",
     "commitlint-config-gitmoji": "^2.3.1",
-    "contentlayer2": "^0.5.8",
     "cz-customizable": "^7.0.0",
     "date-fns": "^2.30.0",
     "fast-shuffle": "^6.0.1",
@@ -57,9 +59,9 @@
     "lexical": "^0.41.0",
     "lint-staged": "^15.0.2",
     "lucide-react": "^0.577.0",
+    "mdx-bundler": "10.1.1",
     "motion": "^12.37.0",
     "next": "16.1.6",
-    "next-contentlayer2": "^0.5.8",
     "next-intl": "^4.8.3",
     "react": "19.2.4",
     "react-day-picker": "^9",
@@ -76,9 +78,11 @@
     "tailwind-merge": "^1.14.0",
     "three": "^0.183.2",
     "typed.js": "^2.0.16",
-    "typewriter-effect": "^2.22.0"
+    "typewriter-effect": "^2.22.0",
+    "zod": "^4"
   },
   "devDependencies": {
+    "@content-collections/cli": "0.1.9",
     "@types/node": "^20",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",

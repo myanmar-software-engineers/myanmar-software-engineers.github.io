@@ -21,7 +21,7 @@ bun dev --port 3333  # Dev server (port 3333)
 bun run build        # Build static site (output: ./out)
 bun run serve        # Serve static build locally
 bun run lint         # ESLint
-bun run content:build # Build contentlayer content
+bun run content:build # Build Content Collections content
 bun run commit       # Interactive gitmoji commit helper
 ```
 

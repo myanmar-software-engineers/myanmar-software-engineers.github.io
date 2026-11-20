@@ -1,6 +1,6 @@
 import PageTransitionWrapper from "@/components/Animate/PageTransitionWrapper/PageTransitionWrapper";
 import APP_CONFIG from "@/config/config";
-import { allClasses } from "contentlayer/generated";
+import { allClasses } from "content-collections";
 import { Metadata } from "next";
 import ClassesPageClient from "./ClassesPageClient";
 

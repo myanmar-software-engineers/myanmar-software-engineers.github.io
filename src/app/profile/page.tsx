@@ -1,6 +1,6 @@
 import Container from "@/components/Common/Container/Container";
 import APP_CONFIG from "@/config/config";
-import { allProfiles } from "contentlayer/generated";
+import { allProfiles } from "content-collections";
 import { Metadata } from "next";
 
 import PageTransitionWrapper from "@/components/Animate/PageTransitionWrapper/PageTransitionWrapper";
