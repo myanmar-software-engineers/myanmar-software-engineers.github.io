@@ -1,4 +1,4 @@
-const { withContentlayer } = require("next-contentlayer2");
+const { withContentCollections } = require("@content-collections/next");
 const createNextIntlPlugin = require("next-intl/plugin");
 const path = require("path");
 
@@ -17,4 +17,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withContentlayer(withNextIntl(nextConfig));
+module.exports = withContentCollections(withNextIntl(nextConfig));

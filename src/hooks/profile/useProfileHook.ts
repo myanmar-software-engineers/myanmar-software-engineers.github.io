@@ -1,6 +1,6 @@
 import { generateColorArray } from "@/utils";
 import { checkIsFoundTag, profileHelperService } from "@/utils/profileHelper";
-import { Profile } from "contentlayer/generated";
+import type { Profile } from "content-collections";
 import { ChangeEvent, useCallback, useMemo, useState } from "react";
 
 const useProfileHook = (initProfiles: Profile[], initSearchTag: string) => {

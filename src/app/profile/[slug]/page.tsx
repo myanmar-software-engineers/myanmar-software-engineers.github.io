@@ -2,7 +2,7 @@ import PageTransitionWrapper from "@/components/Animate/PageTransitionWrapper/Pa
 import Container from "@/components/Common/Container/Container";
 import { Mdx } from "@/components/Common/Mdx/Mdx";
 import SpacingDivider from "@/components/Common/SpacingDivider/SpacingDivider";
-import { allProfiles } from "contentlayer/generated";
+import { allProfiles } from "content-collections";
 import { notFound } from "next/navigation";
 import { FC } from "react";
 
@@ -60,7 +60,7 @@ const PProfileDetailPage: FC<TPProfileDetailPageProps> = async (props) => {
       <Container>
         <section className="py-16">
           <Mdx
-            code={profile.body.code}
+            code={profile.code}
             extraText={`${profile.name} | ${profile.description}`}
           />
         </section>

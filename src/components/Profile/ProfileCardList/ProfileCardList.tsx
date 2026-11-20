@@ -7,7 +7,7 @@ import ProfileCardItem from "@/components/Profile/ProfileCardItem/ProfileCardIte
 import { opacityAnimation } from "@/data/animationVariants";
 import useProfileHook from "@/hooks/profile/useProfileHook";
 import { cn } from "@/utils/index";
-import { Profile } from "contentlayer/generated";
+import type { Profile } from "content-collections";
 import {
   motion,
   useMotionValue,

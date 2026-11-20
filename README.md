@@ -74,7 +74,7 @@ bun dev              # Start dev server
 bun run build        # Build static site (output: ./out)
 bun run serve        # Serve static build locally
 bun run lint         # Run ESLint
-bun run content:build # Rebuild contentlayer content
+bun run content:build # Rebuild Content Collections content
 bun run commit       # Interactive gitmoji commit helper
 ```
 

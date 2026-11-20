@@ -1,8 +1,10 @@
 "use client";
 
 import { cn } from "@/utils";
-import { useMDXComponent } from "next-contentlayer2/hooks";
-import React, { useEffect, useState } from "react";
+import { getMDXComponent } from "mdx-bundler/client";
+import React, { useEffect, useMemo, useState } from "react";
+import * as ReactDOM from "react-dom";
+import * as jsxRuntime from "react/jsx-runtime";
 import TitleText from "../TitleText/TitleText";
 
 const components = {
@@ -163,7 +165,11 @@ interface MdxProps {
 
 /* eslint-disable react-hooks/static-components */
 export function Mdx({ code, extraText }: MdxProps) {
-  const Component = useMDXComponent(code);
+  // Use Next.js's React runtime for hooks inside bundled contributor components.
+  const Component = useMemo(
+    () => getMDXComponent(code, { React, ReactDOM, _jsx_runtime: jsxRuntime }),
+    [code],
+  );
   const [showExtraText, setShowExtraText] = useState(false);
 
   useEffect(() => {

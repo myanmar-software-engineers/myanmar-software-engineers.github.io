@@ -1,6 +1,6 @@
 import PageTransitionWrapper from "@/components/Animate/PageTransitionWrapper/PageTransitionWrapper";
 import APP_CONFIG from "@/config/config";
-import { allBooks } from "contentlayer/generated";
+import { allBooks } from "content-collections";
 import { Metadata } from "next";
 import BooksPageClient from "./BooksPageClient";
 
